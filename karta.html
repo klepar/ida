@@ -1,0 +1,625 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie10"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+    
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+       <title>Karta wyszukania</title>
+        <meta name="description" content="Page Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/d6220a84.bootstrap.css">
+
+
+        <!-- Page-specific Plugin CSS: -->
+
+
+        <!-- Proton CSS: -->
+        <link rel="stylesheet" href="styles/1b2c4b33.proton.css">
+        <link rel="stylesheet" href="styles/vendor/animate.css">
+		<link rel="stylesheet" href="styles/timeline.css">
+		<link rel="stylesheet" href="styles/jquery.jqplot.min.css">
+		
+		
+
+        <!-- adds CSS media query support to IE8   -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="scripts/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Fonts CSS: -->
+        <link rel="stylesheet" href="styles/9a41946e.font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="styles/4d9a7458.font-titillium.css" type="text/css" />
+
+        <!-- Common Scripts: -->
+        <script src="scripts/vendor/jquery.min.js"></script>
+        <script src="scripts/vendor/modernizr.js"></script>
+        <script src="scripts/vendor/jquery.cookie.js"></script>
+		<script src="scripts/vendor/d3.v2.js"></script>	
+		
+		
+    </head>
+
+    <body>
+        
+        <script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+    <nav class="main-menu">
+            <ul>
+                <li><br/><br/><br/></li>
+				<li>
+                    <a href="index.html">
+                        <i class="icon-home nav-icon"></i>
+                        <span class="nav-text">
+                            Start
+                        </span>
+                    </a>
+                </li>
+              
+                <li>
+						<a href="profil.html">
+                        
+						<i class="icon-user nav-icon"></i>
+						
+                        <span class="nav-text">
+                            Profil
+                        </span>
+                    </a>
+		        </li>
+		   
+		   
+				<li>
+                    <a href="modyfikatory.html">
+                        <i class="icon-tasks nav-icon"></i>
+                        <span class="nav-text">
+                            Modyfikatory
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="wyniki.html">
+                        <i class="icon-search nav-icon"></i>
+                        <span class="nav-text">
+                            Wyszukaj ofertę
+                        </span>
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="firma.html">
+                        <i class="icon-building nav-icon"></i>
+                        <span class="nav-text">
+                            Usługodawca
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="branza.html">
+                        <i class="icon-table nav-icon"></i>
+                        <span class="nav-text">
+                            Branża
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="poczta.html">
+                         <i class="icon-envelope-alt nav-icon"><span class="badge" id="inbox-poczta">2</span></i>
+                        
+						<span class="nav-text">
+                            Poczta
+                        </span>
+						
+						
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="formularze.html">
+                        <i class="icon-file nav-icon"></i>
+                        <span class="nav-text">
+                            Formularze umów
+                        </span>
+                    </a>
+				</li>
+				
+				
+				
+				<li>
+                    <a href="edukacja.html">
+                        <i class="icon-book nav-icon"></i>
+                        <span class="nav-text">
+                            Edukacja
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="agentis.html">
+                        <i class="icon-group nav-icon"></i>
+                        <span class="nav-text">
+                            Agentis
+                        </span>
+                    </a>
+				</li>
+		   
+		   </ul>            
+           
+			
+              <ul class="logout">
+                <li>
+                    <a href="login.html">
+                        <i class="icon-off nav-icon"></i>
+                        <span class="nav-text">
+                            Wyloguj się
+                        </span>
+                    </a>
+                <p><br/><br/><br/></p>
+				</li>  
+            </ul>
+        </nav>
+        
+        <section class="sidebar extended">
+            <script>
+                if ($.cookie('protonSidebar') == 'retracted') {
+                    $('.sidebar').removeClass('extended').addClass('retracted');
+                    $('.wrapper').removeClass('retracted').addClass('extended');
+                }
+                if ($.cookie('protonSidebar') == 'extended') {
+                    $('.wrapper').removeClass('extended').addClass('retracted');
+                    $('.sidebar').removeClass('retracted').addClass('extended');
+                }
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <a href="index.html"><img src="images/proton-logo.png" alt="proton-logo"></a>
+                      
+                    </div>
+                </div>
+                <div class="panel-body">
+                    
+                <div class="form-group">
+                                    
+				<h4 class="section-title"><b>Karta wyszukania oferty</b></h4>
+						
+                            	</div>
+				<div class="ramka">	
+				<h6>Poznaj szczegóły oferty. Zobacz jakie są wszystkie składniki w koszcie usługi. Oceń jak przedstawiają się parametry jakościowe oferty.</h6> 
+				</div>
+<div class="karta-wyszukania">
+<div id="pie-chart-karta">
+</div>
+
+<div class="karta-ramka">
+<h5>Nazwa usługi</h5>
+<h5>Długość umowy</h5>
+<h5>Efektywna cena usługi</h5>
+<h5>Komunikat o wykluczeniu</h5>
+</div>
+
+<div class="oceny-karta">
+<div class="oceny-comp-plus"><i class="icon-plus-sign" style="color: #555; font-size:40px;"></i><span class="badge" style="font-size: 18px; background-color: green;">4</span></div>
+<div class="oceny-comp-minus"><span class="badge" style="font-size: 18px; background-color: red;">1</span><i class="icon-minus-sign" style="color: #555; font-size:40px; "></i></div>
+</div>
+</div>
+</div>
+</div>
+     
+           
+			
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+        </section>
+
+        <section class="wrapper retracted scrollable">
+            
+            <script>
+                if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                    }
+                }
+            </script>
+            
+			<nav class="user-menu">
+			
+			
+			
+   			<div class="partnerzy">
+
+<div class="domek-wyniki">
+			<a href="wyniki.html" class="uses-tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="wyszukaj ofertę"><i class="icon-home"></i></a>
+			</div>
+			<div class="save-wyniki">
+			<a class="uses-tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="zapisz w ulubionych"><i class="icon-save"></i></a>
+			</div>
+			<div class="social-wyniki">
+			<a href="#" id="drop1" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-globe uses-tooltip" data-toggle="tooltip" data-placement="right" title="" data-original-title="udostępnij"></i></a>
+			<ul class="dropdown-menu social-compare" role="menu" aria-labelledby="drop1">
+			<li><i class="icon-facebook"> facebook</i>
+			</li>
+			<li><i class="icon-twitter"> twitter</i>
+			</li>
+			<li><i class="icon-linkedin"> linkedin</i>
+			</li>
+			</ul>
+			</div>
+			
+			
+<div class="logo-2" style="float: right;">
+
+
+<a><img src="images/logos/uokik.png"></a>
+
+
+
+
+</div>
+
+
+
+
+           
+</div>           
+
+</nav>
+
+<section class="panel panel-default panel-block">    
+<div class="row">
+<div class="col-md-6" style="max-width: 500px;">                         
+<div class="panel-heading">	
+<h4 class="section-title"><b>Elementy kosztowe oferty</b></h4>
+<div class="form-horizontal karta-koszty">
+<div class="form-group">
+<label class="col-lg-5 control-label">Cena za energię</label>
+<div class="col-lg-3">
+<input class="form-control" id="kwh-dzien" type="" name="kwh-dzien">
+</div>
+<label class="col-lg-2" style="margin: 8px 0px 0px -65px;">Dzień</label>
+<div class="col-lg-3" style="margin-left: 10px;">
+<input class="form-control" id="kwh-noc" type="" name="kwh-noc">
+</div>
+<label class="col-lg-2" style="margin: 8px 0px 0px -65px;">Noc</label>
+</div>
+<div class="form-group">
+<label for="input-horizontal" class="col-lg-5 control-label">Koszty miesięczne zużycia:</label>
+<div class="col-lg-4">
+<input class="form-control" id="m_cost" type="" name="m_cost">
+</div>
+<label class="col-lg-2" style="margin: 8px 0px 0px -65px;">PLN</label>
+</div>
+<div class="form-group">
+<label for="input-horizontal" class="col-lg-5 control-label">Koszty miesięczne dystrybucji:
+</label>
+<div class="col-lg-4">
+<input class="form-control" id="m_dyst" type="" name="m_dyst">
+</div>
+<label class="col-lg-2" style="margin: 8px 0px 0px -65px;">PLN</label>
+</div>
+<div class="form-group">
+<label for="input-horizontal" class="col-lg-5 control-label">Koszty miesięczne ogółem:
+</label>
+<div class="col-lg-4">
+<input class="form-control" id="m_total" type="" name="m_total">
+</div>
+<label class="col-lg-2" style="margin: 8px 0px 0px -65px;">PLN</label>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="col-md-6" style="margin-left: -50px;">   
+<div class="panel-heading">
+<div class="form-horizontal karta-jakosc">	
+<h4 class="section-title"><b>Cechy jakościowe oferty</b></h4>
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<div class="col-lg-12">
+<input class="form-control" id="" type="" name="">
+</div>
+</div>
+<div class="form-group">
+<div class="col-lg-12">
+<input class="form-control" id="" type="" name="">
+</div>
+</div>
+<div class="form-group">
+<div class="col-lg-12">
+<input class="form-control" id="" type="" name="">
+</div>
+</div>
+<div class="form-group">
+<div class="col-lg-12">
+<input class="form-control" id="" type="" name="">
+</div>
+</div>
+<div class="form-group">
+<div class="col-lg-12">
+<input class="form-control" id="" type="" name="">
+</div>
+</div>
+</div>
+<div class="col-md-6" style="text-align: center;">
+<h5 class="section-title"><b>Struktura paliw użytych do produkcji energii</b></h5>
+<div id="chart-struktura" class="chart-paliwa">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section class="panel panel-default panel-block"> 
+<div class="panel-heading">	
+<h4 class="section-title"><b>Wiadomości źródłowe</b></h4>
+<div>
+<div class="timeline" style="margin-top: -20px;">			
+	<div class="timeline-wrap">
+		
+					<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2012-12-31
+</p>
+			</div>
+			<div class="timeline-content">
+				<i class="icon-minus-sign" style="color: red; font-size: 35px;"></i>
+				<h5><b>UOKiK. 90 tys. PLN kary dla spółki Energetyczne Centrum !
+</b></h5>
+				<h6><a href="http://decyzje.uokik.gov.pl/dec_prez.nsf/xsp/.ibmmodres/domino/OpenAttachment/dec_prez.nsf/1CC2BC407F97E786C1257AF700454F66/Body/BIP%20RWA-61-23_12_DJ%20-%20Decyzja%20-%20_EC_.pdf"
+ target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>Urząd Ochrony Konkurencji i Konsumentów nałożył 90 tys. zł kary na spółkę energetyczne Centrum, która - zdaniem Urzędu - stosowała niezgodne z prawem praktyki przy zawieraniu umów z klientami. Chodzi o brak wzoru oświadczenia o odstąpieniu od umowy.</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-down" style="color: red; font-size: 18px;"></i><span style="color: red;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+		</div>	
+		</div>
+		
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-02-14
+</p>
+			</div>
+			<div class="timeline-content">
+				<i class="icon-plus-sign" style="color: green; font-size: 35px;"></i>
+				<h5><b>Energetyczne Centrum dołączyło do darczyńców Fundacji Mam Marzenie!
+</b></h5>
+				<h6><a href="http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-dolaczylo-do-darczyncow-fundacji-mam-marzenie-_7.html"
+ target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>Energetyczne Centrum z radością wspiera finansowo fundację Mam Marzenie i pomaga w spełnianiu marzeń jej podopiecznych. Fundacja Mam Marzenie rozpoczęła działalność w lutym 2004 r. i obecnie posiada 16 oddziałów w całym kraju. Pierwszą polską „marzycielką” była Bogusia - dziewczynka chora na łamliwość kości, której marzenie spełniło się w Orlando na Florydzie, gdzie miała okazję zobaczyć bajkowy świat Walta Disneya. Dziś fundacja szczyci się spełnieniem ponad 4 000 marzeń chorych dzieci. Jako darczyńcy fundacji Mam Marzenie jesteśmy zaszczyceni, że wspólnie możemy spełniać kolejne piękne marzenia chorych dzieci. Już pod koniec kwietnia zrealizujemy marzenie 3-letniej Sandry.</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+		</div>	
+		</div>
+		
+		
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-04-22</p>
+			</div>
+			<div class="timeline-content">
+				<i class="icon-plus-sign" style="color: green; font-size: 35px;"></i>
+				<h5><b>Centrum Energetyczne wspiera Kobiety Przedsiębiorcze!</b></h5>
+				<h6><a href="http://www.ec.net.pl/o-nas/aktualnosci/wspieramy-kobiety-przedsiebiorcze-_14.html#ad-image-0"
+ target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>W piątek, 19 kwietnia, odbyła się gala finałowa Plebiscytu Kobieta Przedsiębiorcza 2012. Energetyczne Centrum było partnerem głównym tegorocznego wydarzenia. Kobieta Przedsiębiorcza to jedyny w regionie plebiscyt wyróżniający i promujący przedsiębiorcze panie. Energetyczne Centrum z przyjemnością wsparło inicjatywę i galę finałową konkursu, zorganizowaną przez radomskie Echo Dnia. W plebiscycie oddano ponad 11 tysięcy głosów, a największe poparcie zdobyła Pani Krystyna Krzyżanowska, współwłaścicielka znanej radomskiej masarni. Wszystkim nagrodzonym Paniom gratulujemy i zapraszamy do obejrzenia galerii zdjęć z gali finałowej.</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+		</div>	
+		</div>
+		
+		
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-09-30
+</p>
+			</div>
+			<div class="timeline-content">
+				<i class="icon-plus-sign" style="color: green; font-size: 35px;"></i>
+				<h5><b>Energetyczne Centrum nagrodzone! - Relacja z gali Lider Regionu 2013
+
+</b></h5>
+				<h6><a href="http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-nagrodzone-relacja-z-gali-lider-regionu-2013_55.html#ad-image-0"
+ target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>W minioną sobotę na gali „Lider Regionu” Energetyczne Centrum zostało uhonorowane statuetką Lidera Regionu w Kategorii Usługi! W imieniu Prezesa Zarządu Energetycznego Centrum Pana Dariusza Chlastawy nagrodę odebrała Ilona Mroczek. Już po raz siódmy redakcja „Echo Dnia” nagradza firmy i instytucje w dorocznym konkursie. Wśród laureatów są duże przedsiębiorstwa jak i mniejsze podmioty gospodarcze, które osiągnęły bardzo dobre wyniki w porównaniu ze swoimi konkurentami na rynku. Serdecznie dziękujemy za to ważne dla nas wyróżnienie. Przede wszystkim dziękujemy naszym Klientom, tym którzy nam zaufali, bo to dla nas największe wyróżnienie i największa nagroda! Zachęcamy do obejrzenia fotogalerii z wydarzenia.</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+		</div>	
+		</div>
+		
+		
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-12-30</p>
+			</div>
+			<div class="timeline-content">
+				<i class="icon-plus-sign" style="color: green; font-size: 35px;"></i>
+				<h5><b>Podarowaliśmy Martynie wymarzony pokój na święta!
+
+</b></h5>
+				<h6><a href="http://www.ec.net.pl/o-nas/aktualnosci/podarowalismy-martynie-wymarzony-pokoj-na-swieta-_68.html#ad-image-0"
+ target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>Przedświąteczny okres, oprócz szaleństwa zakupowego i szykowania pyszności na wigilijne stoły, to przede wszystkim czas, aby dzielić się z innymi dobrą energią. Dlatego tuż przed świętami Energetyczne Centrum SA spełniło kolejne marzenie podopiecznej Fundacji Mam Marzenie. Martyna od prawie dwóch lat jest podopieczną Fundacji Mam Marzenie, która działa na terenie całej Polski i spełnia marzenia ciężko chorych dzieci.</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+		</div>	
+		</div>
+		</div>
+	</div>
+	</div>
+</div>	
+</section>
+			
+
+
+			
+        <div class="footer">
+		<div id="logos">
+		<a style="float:right;"><img src="images/logos/energetyczne_centrum.png" width="65%" height="65%" /></a>
+		</div>
+		
+ </div>
+
+
+
+<script type="text/javascript">
+
+
+// Define the data as a two-dimensional array of numbers. If you had other
+// data to associate with each number, replace each number with an object, e.g.,
+// `{key: "value"}`.
+var data = [
+  [20,  20, 20, 20, 20,20],
+];
+
+// Define the margin, radius, and color scale. The color scale will be
+// assigned by index, but if you define your data using objects, you could pass
+// in a named field from the data object instead, such as `d.name`. Colors
+// are assigned lazily, so if you want deterministic behavior, define a domain
+// for the color scale.
+var m = 7,
+    r = 70,
+    z = d3.scale.ordinal()
+    .range(['red', 'green', 'blue', 'yellow','orange','white']);
+
+// Insert an svg:svg element (with margin) for each row in our dataset. A
+// child svg:g element translates the origin to the pie center.
+var svg = d3.select("#pie-chart-karta").selectAll("svg")
+    .data(data)
+  .enter().append("svg:svg")
+    .attr("width", (r + m) * 2)
+    .attr("height", (r + m) * 2)
+  .append("svg:g")
+    .attr("transform", "translate(" + (r + m) + "," + (r + m) + ")");
+
+// The data for each svg:svg element is a row of numbers (an array). We pass
+// that to d3.layout.pie to compute the angles for each arc. These start and end
+// angles are passed to d3.svg.arc to draw arcs! Note that the arc radius is
+// specified on the arc, not the layout.
+svg.selectAll("path")
+    .data(d3.layout.pie())
+  .enter().append("svg:path")
+    .attr("d", d3.svg.arc()
+    .innerRadius(r / 2)
+    .outerRadius(r))
+    .style("fill", function(d, i) { return z(i); });
+
+	
+	svg.append("svg:text")
+      .attr("dy", ".35em")
+      .attr("text-anchor", "middle")
+      .text('80');
+	
+	
+    </script>
+
+
+ 
+ 
+<script>
+$(document).ready(function(){
+ 
+  Morris.Donut({
+	element: 'chart-struktura',
+  data: [
+    {label: "Zielone", value: 7},
+    {label: "Węgiel", value: 89},
+    {label: "Gaz", value: 3},
+    {label: "Inne", value: 1}
+  ],
+  colors: [
+    'green',
+    'black',
+    'blue',
+    'grey'
+	],
+  formatter: function (y) { return y + "%" ;}
+});
+});
+</script>
+
+ 
+ 
+ 
+ 
+  
+        </section>
+
+		 <script src="scripts/9e25e8e2.bootstrap.min.js"></script>
+
+		<!-- Proton base scripts: -->
+        <script src="scripts/3fa227ae.proton.js"></script>
+
+
+         <!-- Page-specific scripts: -->
+        <script src="scripts/proton/6c42db75.sidebar.js"></script>
+        <script src="scripts/proton/c5769bf5.ui-components-sliders.js"></script>
+     
+  
+        <script src="scripts/vendor/bootstrap-slider.js"></script>
+		
+        <script src="scripts/proton/7d8c8d18.forms.js"></script>
+    
+    
+            <script src="scripts/vendor/select2.min.js"></script>
+
+   
+            <script src="scripts/vendor/jquery.uniform.min.js"></script>
+
+            <script src="scripts/vendor/bootstrap-datetimepicker.js"></script>
+            <script src="scripts/vendor/charCount.js"></script>
+            <script src="scripts/vendor/jquery.textareaCounter.js"></script>
+            <script src="scripts/vendor/summernote.js"></script>
+			<script src="scripts/touch.timeline.js"></script>
+			
+			<script src="scripts/raphael.js"></script>
+			<script src="scripts/jquery.enumerable.js"></script>
+			
+			<script src="scripts/vendor/raphael-min.js"></script>
+			<script src="scripts/vendor/morris.min.js"></script>
+			
+			
+			
+			
+    </body>
+</html>

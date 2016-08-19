@@ -1,0 +1,887 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie10"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+    
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>IDAgentis</title>
+        <meta name="description" content="Page Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/d6220a84.bootstrap.css">
+
+
+ 
+		
+
+        <!-- Proton CSS: -->
+        <link rel="stylesheet" href="styles/1b2c4b33.proton.css">
+        <link rel="stylesheet" href="styles/vendor/animate.css">
+		 <link rel="stylesheet" href="styles/vendor/jquery.pnotify.default.css">
+
+        <!-- adds CSS media query support to IE8   -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="scripts/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Fonts CSS: -->
+        <link rel="stylesheet" href="styles/9a41946e.font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="styles/4d9a7458.font-titillium.css" type="text/css" />
+
+        <!-- Common Scripts: -->
+        <script src="scripts/vendor/jquery.min.js"></script>
+        <script src="scripts/vendor/modernizr.js"></script>
+        <script src="scripts/vendor/jquery.cookie.js"></script>
+		<script src="scripts/vendor/d3.v2.js"></script>		
+		
+    </head>
+
+    <body>
+        
+        <script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+   <nav class="main-menu">
+            <ul>
+                <li><br/><br/><br/></li>
+				<li>
+                    <a href="index.html">
+                        <i class="icon-home nav-icon"></i>
+                        <span class="nav-text">
+                            Start
+                        </span>
+                    </a>
+                </li>
+              
+                <li>
+						<a href="profil.html">
+                        
+						<i class="icon-user nav-icon"></i>
+						
+                        <span class="nav-text">
+                            Profil
+                        </span>
+                    </a>
+		        </li>
+		   
+		   
+				<li>
+                    <a href="modyfikatory.html">
+                        <i class="icon-tasks nav-icon"></i>
+                        <span class="nav-text">
+                            Modyfikatory
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="wyniki.html">
+                        <i class="icon-search nav-icon"></i>
+                        <span class="nav-text">
+                            Wyszukaj ofertę
+                        </span>
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="firma.html">
+                        <i class="icon-building nav-icon"></i>
+                        <span class="nav-text">
+                            Usługodawca
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="branza.html">
+                        <i class="icon-table nav-icon"></i>
+                        <span class="nav-text">
+                            Branża
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="poczta.html">
+                         <i class="icon-envelope-alt nav-icon"><span class="badge" id="inbox-poczta">2</span></i>
+                        
+						<span class="nav-text">
+                            Poczta
+                        </span>
+						
+						
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="formularze.html">
+                        <i class="icon-file nav-icon"></i>
+                        <span class="nav-text">
+                            Formularze umów
+                        </span>
+                    </a>
+				</li>
+				
+				
+				
+				<li>
+                    <a href="edukacja.html">
+                        <i class="icon-book nav-icon"></i>
+                        <span class="nav-text">
+                            Edukacja
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="agentis.html">
+                        <i class="icon-group nav-icon"></i>
+                        <span class="nav-text">
+                            Agentis
+                        </span>
+                    </a>
+				</li>
+		   
+		   </ul>            
+           
+			
+              <ul class="logout">
+                <li>
+                    <a href="login.html">
+                        <i class="icon-off nav-icon"></i>
+                        <span class="nav-text">
+                            Wyloguj się
+                        </span>
+                    </a>
+                <p><br/><br/><br/></p>
+				</li>  
+            </ul>
+        </nav>
+		
+        <section class="sidebar extended">
+            <script>
+                if ($.cookie('protonSidebar') == 'retracted') {
+                    $('.sidebar').removeClass('extended').addClass('retracted');
+                    $('.wrapper').removeClass('retracted').addClass('extended');
+                }
+                if ($.cookie('protonSidebar') == 'extended') {
+                    $('.wrapper').removeClass('extended').addClass('retracted');
+                    $('.sidebar').removeClass('retracted').addClass('extended');
+                }
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <a href="index.html"><img src="images/proton-logo.png" alt="proton-logo"></a>
+                      
+                    </div>
+                </div>
+                <div class="panel-body">
+                    
+                <div class="form-group">
+									
+						<h4 class="section-title"><b>Znajdź Twoją ofertę</b></h4>
+									<div class="preferencje" style="margin-top:-15px;">
+									<label><h5><b>Wybierz branżę</b></h5></label>
+                                    <select class="form-control" id="source" style="margin-top:-10px;">
+										<optgroup label="Ulubiony">
+											<option value="GZ">Energia elektryczna</option>
+										</optgroup>
+										<optgroup label="Usługi">
+											<option value="ee">Energia elektryczna</option>
+											<option value="GZ">Gaz ziemny</option>
+											<option value="GZ">Telefon i internet</option>
+											<option value="GZ">Ubezpieczenie nieruchomości</option>
+											<option value="GZ">Działalność charytatywna</option>
+										</optgroup>
+                                    </select>
+									</div>		
+									<div class="preferencje2">
+									<label><h5><b>Określ długość umowy</b></h5></label>
+									<select class="form-control" id="source" style="margin-top:-10px;">
+                                     
+											<option value="GZ">Czas nieokreślony</option>
+                                            <option value="EE">Umowa na 6 miesięcy</option>
+											<option value="UM">Umowa na 12 miesięcy</option>
+											<option value="OiB">Umowa na 18 miesięcy</option>
+											<option value="DE">Umowa na 24 miesiące</option>
+											<option value="OPP">Umowa na 36 miesięcy</option>
+										
+									</select>
+									</div>
+									
+			  <div class="form-group">
+			  <h5><b>Wybierz profil preferencji zakupowych</b></h5>
+			   <h6>Możesz zazanczyć jednocześnie kilka profili.</h6>				
+			    <div class="form-group">
+                                    
+							
+									<div>
+                                        <div class="btn-group" data-toggle="buttons" id="preferencje_zakupowe">
+                                            <label class="btn btn-modyfikator uses-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Oszczędny" id="sortowanie">
+                                                <input type="checkbox">1
+                                            </label>
+                                            <label class="btn btn-modyfikator uses-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Praktyczny">
+                                                <input type="checkbox">2
+                                            </label>
+                                            <label class="btn btn-modyfikator uses-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Wymagający">
+                                                <input type="checkbox">3
+                                            </label>
+											<label class="btn btn-modyfikator uses-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Etyczny">
+                                                <input type="checkbox">4
+                                            </label>
+											<label class="btn btn-modyfikator uses-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Użytkownika">
+                                                <input type="checkbox">5
+                                            </label>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+			   
+			   
+			   <script>
+			   
+			   $(".btn-modyfikator2").click(function()
+			   {
+			   $('#suwaki-zaawansowane').fadeIn();
+			   $(".wykluczenie").fadeIn();
+			   });
+				
+
+				$(".btn-modyfikator2").dblclick(function()
+			   {		
+				$('#suwaki-zaawansowane').fadeToggle();
+				$(".wykluczenie").fadeToggle();
+			   });
+					
+			   
+			 
+			   
+			   </script>
+			   
+                                <div class="form-group" style="margin-top: -10px;" id="suwaki-zaawansowane">
+                        
+                                        
+										<div class="text-center">
+										<label id="cena">
+										<input type="text" class="bslider modyfikator" value="" id="sl1" data-slider-min="0" data-slider-max="100" data-slider-step="5" data-slider-value="20" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="show" data-slider-handle="square">
+										</label>
+                                        <label id="umowa">
+										<input type="text" class="bslider modyfikator" value="" id="sl2" data-slider-min="0" data-slider-max="100" data-slider-step="5" data-slider-value="20" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="show" data-slider-handle="square" >
+                                        </label>
+										<label id="publiczne">
+										<input type="text" class="bslider modyfikator" value="" id="sl3" data-slider-min="0" data-slider-max="100" data-slider-step="5" data-slider-value="20" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="show" data-slider-handle="square" >
+                                        </label>
+										<label id="niepubliczne">
+										<input type="text" class="bslider modyfikator" value="" id="sl4" data-slider-min="0" data-slider-max="100" data-slider-step="5" data-slider-value="20" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="show" data-slider-placement="left" data-slider-handle="square" >
+                                        </label>
+										<label id="csr">
+										<input type="text" class="bslider modyfikator" value="" id="sl5" data-slider-min="0" data-slider-max="100" data-slider-step="5" data-slider-value="20" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="show" data-slider-handle="square">
+										</label>
+			
+										</div>
+                                							
+                                </div>
+								
+
+								
+								
+								
+								<div class="suwaki-values">
+                                     <label>
+                                        <input id="suwak-val-1" value="20">
+                                     </label>
+                                     <label>
+                                        <input id="suwak-val-2" value="20">
+                                     </label>
+									 <label>
+                                        <input id="suwak-val-3" value="20">
+                                     </label>
+									 <label>
+                                        <input id="suwak-val-4" value="20">
+                                     </label>
+									 <label>
+                                        <input id="suwak-val-5" value="20">
+                                     </label>
+									 
+                                    </div>
+								
+								<h5 style="margin-top: -10px; margin-left: 70px;"><b>Dopasowanie wyniku </b><i class="icon-info-sign uses-tooltip" data-original-title="pomoc" data-placement="right"></i></h5>
+
+								 <div class="form-group" style="margin-left: 65px;">
+								 
+                                        <input type="text" class="bslider" value="100" id="sl7" data-slider-min="0" data-slider-max="100" data-slider-step="25" data-slider-value="0" data-slider-tooltip="show" data-slider-handle="round" >
+									</div>
+							</div>
+			 </div>   
+		 </div>	   
+
+
+
+			 
+			
+<script>
+$(document).ready(function(){
+	$('#sl1').slider({
+          formater: function(value) {
+            return 'Cena';
+          }
+        });
+	$('#sl2').slider({
+          formater: function(value) {
+            return 'Umowa';
+          }
+        });
+	$('#sl3').slider({
+          formater: function(value) {
+            return 'Oceny publiczne';
+			
+          }
+        });
+	$('#sl4').slider({
+          formater: function(value) {
+            return 'Oceny prywatne';
+			
+          }
+        });
+	$('#sl5').slider({
+          formater: function(value) {
+            return 'CSR';
+          }
+        });	
+	
+	$('#sl7').slider();
+});
+</script>
+
+		
+			
+			
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+        </section>
+
+        <section class="wrapper retracted scrollable">
+            
+            <script>
+                if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                    }
+                }
+            </script>
+            
+			
+			
+			
+			
+			
+			<nav class="user-menu">
+			
+			
+			</nav>
+			
+			
+			<div class="panel panel-default panel-block panel-title-block">
+                    <div class="panel-body">
+                      
+					  <h4 class="section-title"><b>Wybierz najlepszą ofertę korzystając z naszej analizy !</b></h4>
+                           
+                            <h5>  
+									Pamiętaj, że możesz sprawdzić jaki wpływ na Twój wybór mają ustawienia preferencji zakupowych.</br>
+									Określ czy chciałbyś zobaczyć wszystkie oferty czy też tylko te najlepsze (dopasowanie wyniku).
+                                </h5>
+                    </div>
+	
+								
+	
+	
+	
+<div class="row" style="margin-top: -20px;">
+
+<div class="col-lg-6" style="text-align: center; border-right: 1px solid #E5E5E5;">
+
+<h3 class="section title"><b>G-11</b></h3>
+	
+	
+<ul id="Grid">
+
+	<li class="karta_wyszukania 1" data-myorder="3">	
+	<div class="block-cart 1 panel-cart">
+	<div class="front-cart">
+		<form action="###" method="post">
+				<input type="submit" class="reverse 1" value="Odkryj" />
+			</form>
+	
+	<div id="w11_chart_1" class="chart-wyszukania">
+	</div>
+	</div>
+	<div class="back-cart">
+		<div class="guzik">
+			<form action="###" method="post">
+				<input type="submit" class="averse 1" value="Zakryj" />
+			</form>
+		</div>
+		<div class="karta-logo">
+		<img src="images/logos/duon.png">
+		</div>
+		<div class="karta-wybory">
+		<div>
+		
+		<button class="btn btn-details 1 uses-tooltip" OnClick="location.href='karta.html'" data-toggle="tooltip" data-placement="left" title="" data-original-title="szczegóły oferty"><i class="icon-zoom-in" ></i></button>
+		<button class="btn btn-compare 1 uses-tooltip" data-toggle="tooltip" data-placement="right" title="" data-original-title="porównaj oferty"><i class="icon-copy " ></i></button><br />
+		<button class="btn btn-buy 1 uses-tooltip data-toggle="tooltip" data-placement="right" title="" data-original-title="dodaj do ulubionych"><i class="icon-shopping-cart"></i></button>
+		</div>
+        </div>
+	
+	</div>
+	</div>
+	</li>
+	
+	<li class="karta_wyszukania 2" data-myorder="5">	
+	<div class="block-cart 2 panel-cart">
+	<div class="front-cart" style="background-color: black;">
+		<form action="###" method="post">
+				<input type="submit" class="reverse 2" value="Odkryj" />
+			</form>
+	<div id="w11_chart_2" class="chart-wyszukania">
+	</div>
+	</div>
+		<div class="back-cart">
+		<div class="guzik">
+			<form action="###" method="post">
+				<input type="submit" class="averse 2" value="Zakryj" />
+			</form>
+		</div>
+		<div class="karta-logo">
+		<img src="images/logos/energetyczne_centrum.png">
+		</div>
+		<div class="karta-wybory">
+		<div>
+		
+		<button class="btn btn-details 2 uses-tooltip" OnClick="location.href='karta.html'" data-toggle="tooltip" data-placement="left" title="" data-original-title="szczegóły oferty"><i class="icon-zoom-in" ></i></button>
+		<button class="btn btn-compare 2 uses-tooltip" data-toggle="tooltip" data-placement="right" title="" data-original-title="porównaj oferty"><i class="icon-copy " ></i></button><br />
+		<button class="btn btn-buy 2 uses-tooltip data-toggle="tooltip" data-placement="right" title="" data-original-title="dodaj do ulubionych" OnClick=""><i class="icon-shopping-cart"></i></button>
+		</div>
+        </div>
+	
+	</div>
+	</div>
+	</li>
+	
+	<li class="karta_wyszukania 3" data-myorder="4">	
+	<div class="block-cart 3 panel-cart">
+	<div class="front-cart">
+		<form action="###" method="post">
+				<input type="submit" class="reverse 3" value="Odkryj" />
+			</form>
+	<div id="w11_chart_3" class="chart-wyszukania">
+	</div>
+	</div>
+	<div class="back-cart" style="background: blue";>
+		<div class="guzik">
+			<form action="###" method="post">
+				<input type="submit" class="averse 3" value="Zakryj" />
+			</form>
+		</div>
+		<div style="margin-top:50px; font-size: 30px; color: white">
+		Reklama :)
+		</div>
+	</div>
+	</div>
+	</li>
+	
+	<li class="karta_wyszukania 4" data-myorder="1">	
+	<div class="block-cart 4 panel-cart">
+	<div class="front-cart">
+		<form action="###" method="post">
+				<input type="submit" class="reverse 4" value="Odkryj" />
+			</form>
+	<div id="w11_chart_4" class="chart-wyszukania">
+	</div>
+	</div>
+		<div class="back-cart">
+		<div class="guzik">
+			<form action="###" method="post">
+				<input type="submit" class="averse 4" value="Zakryj" />
+			</form>
+		</div>
+		<div class="karta-logo2">
+		<img src="images/logos/enea.png">
+		</div>
+		<div class="karta-wybory">
+		<div>
+		
+		<button class="btn btn-details 4 uses-tooltip" OnClick="location.href='karta.html'" data-toggle="tooltip" data-placement="left" title="" data-original-title="szczegóły oferty"><i class="icon-zoom-in" ></i></button>
+		<button class="btn btn-compare 4 uses-tooltip" data-toggle="tooltip" data-placement="right" title="" data-original-title="porównaj oferty"><i class="icon-copy " ></i></button><br />
+		<button class="btn btn-buy 4 uses-tooltip data-toggle="tooltip" data-placement="right" title="" data-original-title="dodaj do ulubionych" OnClick=""><i class="icon-shopping-cart"></i></button>
+		</div>
+        </div>
+		<div class="oceny-karta grid" style="margin-top: -25px;">
+		<div class="oceny-comp-plus"><i class="icon-plus-sign" style="color: #555; font-size:30px;"></i><span class="badge" style="font-size: 18px; background-color: green;">4</span></div>
+		<div class="oceny-comp-minus"><span class="badge" style="font-size: 18px; background-color: red;">1</span><i class="icon-minus-sign" style="color: #555; font-size:30px; "></i></div>
+	</div>
+	</div>
+	</div>
+	</li>
+	
+	<li class="karta_wyszukania 5" data-myorder="2">	
+	<div class="block-cart 5 panel-cart">
+	<div class="front-cart">
+		<form action="###" method="post">
+				<input type="submit" class="reverse 5" value="Odkryj" />
+			</form>
+	<div id="w11_chart_5" class="chart-wyszukania">
+	</div>
+		<div class="oceny-karta grid">
+		<div class="oceny-comp-plus"><i class="icon-plus-sign" style="color: #555; font-size:35px;"></i><span class="badge" style="font-size: 18px; background-color: green;">5</span></div>
+		<div class="oceny-comp-minus"><span class="badge" style="font-size: 18px; background-color: red;">1</span><i class="icon-minus-sign" style="color: #555; font-size:35px; "></i></div>
+	</div>
+	</div>
+		<div class="back-cart">
+		<div class="guzik">
+			<form action="###" method="post">
+				<input type="submit" class="averse 5" value="Zakryj" />
+			</form>
+		</div>
+		<div class="karta-logo2">
+		<img src="images/logos/pge.png">
+		</div>
+		<div class="karta-wybory">
+		<div>
+		
+		<button class="btn btn-details 5 uses-tooltip" OnClick="location.href='karta.html'" data-toggle="tooltip" data-placement="left" title="" data-original-title="szczegóły oferty"><i class="icon-zoom-in" ></i></button>
+		<button class="btn btn-compare 5 uses-tooltip" data-toggle="tooltip" data-placement="right" title="" data-original-title="porównaj oferty"><i class="icon-copy " ></i></button><br />
+		<button class="btn btn-buy 5 uses-tooltip data-toggle="tooltip" data-placement="right" title="" data-original-title="dodaj do ulubionych" OnClick="location.href='profil.html#tabs-ulubione'"><i class="icon-shopping-cart"></i></button>
+		</div>
+        </div>
+	</div>
+	</div>
+	</li>		
+</ul>
+</div>
+
+<div class="col-lg-6" style="text-align: center;">
+
+<h3 class="section title"><b>G-12</b></h3>
+	
+<ul id="Grid2">
+				
+<li class="karta_wyszukania-2">	
+	<div class="block-cart 6 panel-cart">
+	<div class="front-cart">
+		<form action="###" method="post">
+				<input type="submit" class="reverse 6" value="Odkryj" />
+			</form>
+	<div id="w12_chart_1" class="chart-wyszukania">
+	</div>
+	
+	</div>
+		<div class="back-cart">
+		<div class="guzik">
+			<form action="###" method="post">
+				<input type="submit" class="averse 6" value="Zakryj" />
+			</form>
+		</div>
+		
+		</div>
+        </div>
+</li>		
+
+<li class="karta_wyszukania-2">	
+	<div class="block-cart 6 panel-cart">
+	<div class="front-cart">
+		<form action="###" method="post">
+				<input type="submit" class="reverse 6" value="Odkryj" />
+			</form>
+	<div id="w12_chart_2" class="chart-wyszukania">
+	</div>
+	
+	</div>
+		<div class="back-cart">
+		<div class="guzik">
+			<form action="###" method="post">
+				<input type="submit" class="averse 6" value="Zakryj" />
+			</form>
+		</div>
+		
+		</div>
+        </div>
+</li>	
+
+<li class="karta_wyszukania-2">	
+	<div class="block-cart 6 panel-cart">
+	<div class="front-cart">
+		<form action="###" method="post">
+				<input type="submit" class="reverse 6" value="Odkryj" />
+			</form>
+	<div id="w12_chart_3" class="chart-wyszukania">
+	</div>
+	
+	</div>
+		<div class="back-cart">
+		<div class="guzik">
+			<form action="###" method="post">
+				<input type="submit" class="averse 6" value="Zakryj" />
+			</form>
+		</div>
+		
+		</div>
+        </div>
+</li>	
+
+<li class="karta_wyszukania-2">	
+	<div class="block-cart 6 panel-cart">
+	<div class="front-cart">
+		<form action="###" method="post">
+				<input type="submit" class="reverse 6" value="Odkryj" />
+			</form>
+	<div id="w12_chart_4" class="chart-wyszukania">
+	</div>
+	
+	</div>
+		<div class="back-cart">
+		<div class="guzik">
+			<form action="###" method="post">
+				<input type="submit" class="averse 6" value="Zakryj" />
+			</form>
+		</div>
+		
+		</div>
+        </div>
+</li>	
+
+<li class="karta_wyszukania-2">	
+	<div class="block-cart 6 panel-cart">
+	<div class="front-cart">
+		<form action="###" method="post">
+				<input type="submit" class="reverse 6" value="Odkryj" />
+			</form>
+	<div id="w12_chart_5" class="chart-wyszukania">
+	</div>
+	
+	</div>
+		<div class="back-cart">
+		<div class="guzik">
+			<form action="###" method="post">
+				<input type="submit" class="averse 6" value="Zakryj" />
+			</form>
+		</div>
+		
+		</div>
+        </div>
+</li>	
+	
+</ul>
+				
+				
+			
+</div>
+				
+</div>
+					
+</div>
+
+</div>			
+
+</div>				
+
+
+
+
+
+
+
+            
+<div class="footer">
+
+
+<div id="logos2">
+
+<table class="logos_table" style="display:none;"><tr>
+<td><a href="/"><img src="images/logos/duon.png" width="70%" height="70%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/energie2.png" width="65%" height="65%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/enea.png" width="55%" height="55%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/energetyczne_centrum.png" width="60%" height="60%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/pge.png" width="65%" height="65%" border="0" alt="ure" /></a></td>
+</tr></table>
+
+<table class="logos_table" style="display:none;"><tr>
+<td><a href="/"><img src="images/logos/tauron.png" width="65%" height="65%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/polski_prad.png" width="85%" height="85%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/egesa.png" width="75%" height="75%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/rwe.png" width="80%" height="75%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/interenergia.png" width="75%" height="75%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/3 wings.png" width="75%" height="75%" border="0" alt="ure" /></a></td>
+
+
+</tr></table>
+</div>
+
+<script type="text/javascript">
+function show(i) {
+jQuery('#logos2 table:visible').fadeOut('medium',function() {
+jQuery('#logos2 table').eq(i).fadeIn('medium');
+});
+if (++i >= jQuery('#logos2 table').length){i=0};
+setTimeout('show(' + i + ')',5000);
+}
+$(document).ready(function(){
+if(jQuery('#logos2 table').length > 1){
+jQuery(function() { jQuery('#logos2 table:first').show(); setTimeout('show(0)',5000); });
+}
+else{
+jQuery('#logos2 table:first').show();
+}
+});
+</script> 
+
+
+<script>
+$(document).ready(function () {
+		
+		$.pnotify.defaults.shadow = false;
+		$.pnotify.defaults.cornerclass = 'ui-pnotify-sharp';
+		$.pnotify.defaults.stack = {"dir1": "down", "dir2": "left", "push": "bottom", "spacing1": 5, "spacing2": 5};
+
+		setTimeout(function(){
+		    $.pnotify({
+		        title: 'Odkryj kartę wyszukania',
+		        type: 'info',
+		        history: false,
+				hide: false,
+		        text: 'Poznaj szczegóły oferty. <br/> Porównaj dwie wybrane karty wyszukania. <br/>Obserwuj lub zamów wybraną usługę! '
+		    });
+		}, 2000);
+		/** setTimeout(function(){
+		    $.pnotify({
+		        title: 'Zarządzaj kartami',
+		        type: 'info',
+		        history: false,
+				hide: false,
+		        text: 'Porównaj dwie wybrane karty wyszukania. </br>Obserwuj lub zamów wybraną usługę!'
+		    });
+		}, 10000);**/
+});
+</script>	
+
+
+                           
+</div>  			
+
+
+
+
+                           
+            
+            
+</section>
+
+
+
+
+<div class="panel-comparing" style="display: none;">
+
+<a class="comparing-one" style="color: yellow; display: none;">Wybrałeś 1 ofertę: DUON</a>
+<a class="comparing-action" href="porownanie.html" style="color: yellow; display: none;">Porównaj dwie oferty: Duon vs EC</a>
+
+<a href="javascript:" style="float: right; margin-right:20px; color: red;" id="panel-comparing-close">Zamknij</a>
+
+
+</div>
+
+
+
+<script>
+
+$('button.btn.btn-compare.1').click(function() {
+$(".panel-comparing").show();
+$(".comparing-one").show();
+$(".comparing-action").hide();
+
+
+});
+$('button.btn.btn-compare.2').click(function() {
+$(".comparing-one").hide();
+$(".comparing-action").show();
+});
+
+
+$('#panel-comparing-close').click(function () {
+$(".panel-comparing").hide();
+$.removeCookie("porownanie");
+});
+
+if ($.cookie("porownanie") == "dwa") {
+$(".panel-comparing").show();
+$(".comparing-action").show();
+};
+
+</script>
+
+
+
+
+
+
+
+
+
+     <script src="scripts/9e25e8e2.bootstrap.min.js"></script>
+
+		<!-- Proton base scripts: -->
+        <script src="scripts/3fa227ae.proton.js"></script>
+		<script src="scripts/vendor/bootstrap-tagsinput.min.js"></script>
+
+         <!-- Page-specific scripts: -->
+        <script src="scripts/proton/6c42db75.sidebar.js"></script>
+     
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+  
+        <script src="scripts/vendor/bootstrap-slider.js"></script>
+		
+        <script src="scripts/proton/7d8c8d18.forms.js"></script>
+    
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+  
+    
+            <script src="scripts/vendor/select2.min.js"></script>
+
+   
+            <script src="scripts/vendor/jquery.uniform.min.js"></script>
+
+            <script src="scripts/vendor/bootstrap-datetimepicker.js"></script>
+            <script src="scripts/vendor/charCount.js"></script>
+            <script src="scripts/vendor/jquery.textareaCounter.js"></script>
+            <script src="scripts/vendor/summernote.js"></script>	   
+			<script src="scripts/slideout_tip.js"></script>
+
+			<script src="scripts/jquery.mixitup.js"></script>
+			<script src="scripts/jquery.flippy.js"></script>
+			<script src="scripts/vendor/jquery.pnotify.min.js"></script>
+			<script src="scripts/wyniki.js"></script>
+			<script src="scripts/koszyk.js"></script>
+    
+			
+			
+    </body>
+</html>

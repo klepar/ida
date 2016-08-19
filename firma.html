@@ -1,0 +1,462 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie10"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+    
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+       <title>IDAgentis</title>
+        <meta name="description" content="Page Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/d6220a84.bootstrap.css">
+
+
+        <!-- Page-specific Plugin CSS: -->
+
+
+        <!-- Proton CSS: -->
+        <link rel="stylesheet" href="styles/1b2c4b33.proton.css">
+        <link rel="stylesheet" href="styles/vendor/animate.css">
+		<link rel="stylesheet" href="styles/timeline.css">
+
+        <!-- adds CSS media query support to IE8   -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="scripts/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Fonts CSS: -->
+        <link rel="stylesheet" href="styles/9a41946e.font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="styles/4d9a7458.font-titillium.css" type="text/css" />
+
+        <!-- Common Scripts: -->
+        <script src="scripts/vendor/jquery.min.js"></script>
+        <script src="scripts/vendor/modernizr.js"></script>
+        <script src="scripts/vendor/jquery.cookie.js"></script>
+    </head>
+
+    <body>
+        
+        <script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+    <nav class="main-menu">
+            <ul>
+                <li><br/><br/><br/></li>
+				<li>
+                    <a href="index.html">
+                        <i class="icon-home nav-icon"></i>
+                        <span class="nav-text">
+                            Start
+                        </span>
+                    </a>
+                </li>
+              
+                <li>
+						<a href="profil.html">
+                        
+						<i class="icon-user nav-icon"></i>
+						
+                        <span class="nav-text">
+                            Profil
+                        </span>
+                    </a>
+		        </li>
+		   
+		   
+				<li>
+                    <a href="modyfikatory.html">
+                        <i class="icon-tasks nav-icon"></i>
+                        <span class="nav-text">
+                            Modyfikatory
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="wyniki.html">
+                        <i class="icon-search nav-icon"></i>
+                        <span class="nav-text">
+                            Wyszukaj ofertę
+                        </span>
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="firma.html">
+                        <i class="icon-building nav-icon"></i>
+                        <span class="nav-text">
+                            Usługodawca
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="branza.html">
+                        <i class="icon-table nav-icon"></i>
+                        <span class="nav-text">
+                            Branża
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="poczta.html">
+                         <i class="icon-envelope-alt nav-icon"><span class="badge" id="inbox-poczta">2</span></i>
+                        
+						<span class="nav-text">
+                            Poczta
+                        </span>
+						
+						
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="formularze.html">
+                        <i class="icon-file nav-icon"></i>
+                        <span class="nav-text">
+                            Formularze umów
+                        </span>
+                    </a>
+				</li>
+				
+				
+				
+				<li>
+                    <a href="edukacja.html">
+                        <i class="icon-book nav-icon"></i>
+                        <span class="nav-text">
+                            Edukacja
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="agentis.html">
+                        <i class="icon-group nav-icon"></i>
+                        <span class="nav-text">
+                            Agentis
+                        </span>
+                    </a>
+				</li>
+		   
+		   </ul>            
+           
+			
+              <ul class="logout">
+                <li>
+                    <a href="login.html">
+                        <i class="icon-off nav-icon"></i>
+                        <span class="nav-text">
+                            Wyloguj się
+                        </span>
+                    </a>
+                <p><br/><br/><br/></p>
+				</li>  
+            </ul>
+        </nav>
+        
+        <section class="sidebar extended">
+            <script>
+                if ($.cookie('protonSidebar') == 'retracted') {
+                    $('.sidebar').removeClass('extended').addClass('retracted');
+                    $('.wrapper').removeClass('retracted').addClass('extended');
+                }
+                if ($.cookie('protonSidebar') == 'extended') {
+                    $('.wrapper').removeClass('extended').addClass('retracted');
+                    $('.sidebar').removeClass('retracted').addClass('extended');
+                }
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <a href="index.html"><img src="images/proton-logo.png" alt="proton-logo"></a>
+                      
+                    </div>
+                </div>
+                <div class="panel-body">
+                    
+                <div class="form-group">
+                                    
+				<h4 class="section-title"><b>Poznaj profil usługodawcy</b></h4>
+									<div class="ramka">
+									<h6> Pamiętaj, że możesz w swoim profilu zapisać obserwowane przez Ciebie firmy.</br>
+									Możesz tam również ustalić zasady prezentacji danych.</h6>
+									
+									<label><h5><b>Wybierz usługodawcę</b></h5></label>
+                                    <select class="form-control" id="source">
+                                        <optgroup label="Ulubiony">
+											<option value="GZ">ENEA</option>
+										</optgroup>
+										<optgroup label="Energia elektryczna">
+                                            <option value="AA" selected="selected">Energetyczne Centrum</option>
+											<option value="GZ">ENEA</option>
+                                            <option value="EE">Energa</option>
+											<option value="OiB">PGE</option>
+											<option value="OPP">Tauron</option>
+                                        </optgroup>
+										<optgroup label="Gaz ziemny">
+                                            <option value="GZ">DUON</option>
+                                            <option value="EE">EGESA</option>
+											<option value="UM">Gaspol</option>
+											<option value="OiB">Energia dla firm</option>
+											<option value="DE">Lumius</option>
+											<option value="OPP">PGNiG</option>
+										</optgroup>
+
+										
+                                    </select>
+                            	<p><br/></p>
+								</div>
+                            	</div>
+				
+                </div>
+				
+				</div>
+                </div>
+				
+           
+			
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+        </section>
+
+        <section class="wrapper retracted scrollable">
+            
+            <script>
+                if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                    }
+                }
+            </script>
+            
+			<nav class="user-menu">
+			
+   			<div class="partnerzy">
+
+<div id="logos">
+
+
+
+<table class="logos_table" style="display:none; float:right;"><tr>
+<td><a href=""><img src="images/logos/ure.png" width="65%" height="65%" border="0" alt="ure" /></a></td>
+<td><a href=""><img src="images/logos/uokik.png" width="70%" height="70%" border="0" alt="uokik" /></a></td>
+
+</tr></table>
+
+
+</div>
+
+<script type="text/javascript">
+function show(i) {
+jQuery('#logos table:visible').fadeOut('medium',function() {
+jQuery('#logos table').eq(i).fadeIn('medium');
+});
+if (++i >= jQuery('#logos table').length){i=0};
+setTimeout('show(' + i + ')',5000);
+}
+$(document).ready(function(){
+if(jQuery('#logos table').length > 1){
+jQuery(function() { jQuery('#logos table:first').show(); setTimeout('show(0)',5000); });
+}
+else{
+jQuery('#logos table:first').show();
+}
+});
+</script> 
+
+           
+</div>           
+			
+			</nav>
+			
+			<div class="col-md-12">
+			<div class="panel panel-default panel-block panel-title-block">
+                   <div class="panel-body">
+                        
+                           
+                        <h4 class="section-title"><b>Energetyczne Centrum</b></h4>
+<a href="http://www.esn1.eu/" target="_blank">strona www firmy</a>
+<h5 class="infoteka">Energetyczne Centrum S.A., niezależny sprzedawca energii elektrycznej, prowadzi swoją
+działalność na terenie całej Polski od 2011 roku. Odbiorcami oferty Energetycznego Centrum
+są gospodarstwa domowe oraz przedsiębiorstwa.</h5>
+
+
+<h4 class="section-title"><b>Dane</b></h4>	
+
+
+<h4 class="section-title"><b>Istotne wydarzenia</b></h4>			
+<h5>Dowiedz się, jakie informacje na temat usługodawcy pojawiły się w ciągu ostatnich kilkunastu miesięcy w publicznie dostępnych źródłach danych.
+Sprawdź czy usługodawca został nagordzony, czy też może dostał karę. Dowiedz się jak instytucje publiczne i branżwoe oceniaję jakość świadczonych przez niego usług. 
+Oceń zakres i obszar jego działań na rzecz otoczenia (interesariuszy).
+</h5>
+</div>
+<div class="panel-heading">
+<div class="timeline">			
+	<div class="timeline-wrap">
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2012-12-31
+</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>UOKiK. 90 tys. PLN kary dla spółki Energetyczne Centrum !
+</b></h5>
+				<h6><a href="http://decyzje.uokik.gov.pl/dec_prez.nsf/xsp/.ibmmodres/domino/OpenAttachment/dec_prez.nsf/1CC2BC407F97E786C1257AF700454F66/Body/BIP%20RWA-61-23_12_DJ%20-%20Decyzja%20-%20_EC_.pdf"
+ target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>Urząd Ochrony Konkurencji i Konsumentów nałożył 90 tys. zł kary na spółkę energetyczne Centrum, która - zdaniem Urzędu - stosowała niezgodne z prawem praktyki przy zawieraniu umów z klientami. Chodzi o brak wzoru oświadczenia o odstąpieniu od umowy.</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-down" style="color: red; font-size: 18px;"></i><span style="color: red;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+		</div>	
+		</div>
+		
+		
+		
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-02-14
+</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>Energetyczne Centrum dołączyło do darczyńców Fundacji Mam Marzenie!
+</b></h5>
+				<h6><a href="http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-dolaczylo-do-darczyncow-fundacji-mam-marzenie-_7.html"
+ target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>Energetyczne Centrum z radością wspiera finansowo fundację Mam Marzenie i pomaga w spełnianiu marzeń jej podopiecznych. Fundacja Mam Marzenie rozpoczęła działalność w lutym 2004 r. i obecnie posiada 16 oddziałów w całym kraju. Pierwszą polską „marzycielką” była Bogusia - dziewczynka chora na łamliwość kości, której marzenie spełniło się w Orlando na Florydzie, gdzie miała okazję zobaczyć bajkowy świat Walta Disneya. Dziś fundacja szczyci się spełnieniem ponad 4 000 marzeń chorych dzieci. Jako darczyńcy fundacji Mam Marzenie jesteśmy zaszczyceni, że wspólnie możemy spełniać kolejne piękne marzenia chorych dzieci. Już pod koniec kwietnia zrealizujemy marzenie 3-letniej Sandry.</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+		</div>	
+		</div>
+		
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-04-22</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>Centrum Energetyczne wspiera Kobiety Przedsiębiorcze!</b></h5>
+				<h6><a href="http://www.ec.net.pl/o-nas/aktualnosci/wspieramy-kobiety-przedsiebiorcze-_14.html#ad-image-0"
+ target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>W piątek, 19 kwietnia, odbyła się gala finałowa Plebiscytu Kobieta Przedsiębiorcza 2012. Energetyczne Centrum było partnerem głównym tegorocznego wydarzenia. Kobieta Przedsiębiorcza to jedyny w regionie plebiscyt wyróżniający i promujący przedsiębiorcze panie. Energetyczne Centrum z przyjemnością wsparło inicjatywę i galę finałową konkursu, zorganizowaną przez radomskie Echo Dnia. W plebiscycie oddano ponad 11 tysięcy głosów, a największe poparcie zdobyła Pani Krystyna Krzyżanowska, współwłaścicielka znanej radomskiej masarni. Wszystkim nagrodzonym Paniom gratulujemy i zapraszamy do obejrzenia galerii zdjęć z gali finałowej.</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+		</div>	
+		</div>
+		
+		
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-09-30
+</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>Energetyczne Centrum nagrodzone! - Relacja z gali Lider Regionu 2013
+
+</b></h5>
+				<h6><a href="http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-nagrodzone-relacja-z-gali-lider-regionu-2013_55.html#ad-image-0"
+ target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>W minioną sobotę na gali „Lider Regionu” Energetyczne Centrum zostało uhonorowane statuetką Lidera Regionu w Kategorii Usługi! W imieniu Prezesa Zarządu Energetycznego Centrum Pana Dariusza Chlastawy nagrodę odebrała Ilona Mroczek. Już po raz siódmy redakcja „Echo Dnia” nagradza firmy i instytucje w dorocznym konkursie. Wśród laureatów są duże przedsiębiorstwa jak i mniejsze podmioty gospodarcze, które osiągnęły bardzo dobre wyniki w porównaniu ze swoimi konkurentami na rynku. Serdecznie dziękujemy za to ważne dla nas wyróżnienie. Przede wszystkim dziękujemy naszym Klientom, tym którzy nam zaufali, bo to dla nas największe wyróżnienie i największa nagroda! Zachęcamy do obejrzenia fotogalerii z wydarzenia.</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+		</div>	
+		</div>
+		
+		
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-12-30</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>Podarowaliśmy Martynie wymarzony pokój na święta!
+
+</b></h5>
+				<h6><a href="http://www.ec.net.pl/o-nas/aktualnosci/podarowalismy-martynie-wymarzony-pokoj-na-swieta-_68.html#ad-image-0"
+ target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>Przedświąteczny okres, oprócz szaleństwa zakupowego i szykowania pyszności na wigilijne stoły, to przede wszystkim czas, aby dzielić się z innymi dobrą energią. Dlatego tuż przed świętami Energetyczne Centrum SA spełniło kolejne marzenie podopiecznej Fundacji Mam Marzenie. Martyna od prawie dwóch lat jest podopieczną Fundacji Mam Marzenie, która działa na terenie całej Polski i spełnia marzenia ciężko chorych dzieci.</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+		</div>	
+		</div>
+		</div>
+		
+	</div>
+</div>	
+</div>					
+</div>	
+
+			
+        <div class="footer">
+		<div id="logos">
+	<a style="float:right;"><img src="images/logos/energetyczne_centrum.png" width="65%" height="65%" /></a>
+	</div>
+		
+ </div>
+			
+        </section>
+
+		 <script src="scripts/9e25e8e2.bootstrap.min.js"></script>
+
+		<!-- Proton base scripts: -->
+        <script src="scripts/3fa227ae.proton.js"></script>
+
+
+         <!-- Page-specific scripts: -->
+        <script src="scripts/proton/6c42db75.sidebar.js"></script>
+        <script src="scripts/proton/c5769bf5.ui-components-sliders.js"></script>
+     
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+  
+        <script src="scripts/vendor/bootstrap-slider.js"></script>
+		
+        <script src="scripts/proton/7d8c8d18.forms.js"></script>
+    
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+  
+    
+            <script src="scripts/vendor/select2.min.js"></script>
+
+   
+            <script src="scripts/vendor/jquery.uniform.min.js"></script>
+
+            <script src="scripts/vendor/bootstrap-datetimepicker.js"></script>
+            <script src="scripts/vendor/charCount.js"></script>
+            <script src="scripts/vendor/jquery.textareaCounter.js"></script>
+            <script src="scripts/vendor/summernote.js"></script>
+			
+			<script src="scripts/vendor/summernote.js"></script>
+			<script src="scripts/touch.timeline.js"></script>
+			
+			
+			
+			
+    </body>
+</html>

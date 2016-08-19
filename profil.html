@@ -1,0 +1,1015 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie10"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+    
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+       <title>IDAgentis</title>
+        <meta name="description" content="Page Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/d6220a84.bootstrap.css">
+		
+		
+        <!-- Page-specific Plugin CSS: -->
+		<link rel="stylesheet" href="styles/vendor/select2/select2.css">
+        <link rel="stylesheet" href="styles/vendor/uniformjs/css/uniform.default.css">
+		<link rel="stylesheet" href="styles/vendor/datatables.css" media="screen">
+        <!-- Proton CSS: -->
+        <link rel="stylesheet" href="styles/1b2c4b33.proton.css">
+        <link rel="stylesheet" href="styles/vendor/animate.css">
+
+        <!-- adds CSS media query support to IE8   -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="scripts/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Fonts CSS: -->
+        <link rel="stylesheet" href="styles/9a41946e.font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="styles/4d9a7458.font-titillium.css" type="text/css" />
+
+        <!-- Common Scripts: -->
+        <script src="scripts/vendor/jquery.min.js"></script>
+        <script src="scripts/vendor/modernizr.js"></script>
+        <script src="scripts/vendor/jquery.cookie.js"></script>
+    </head>
+
+    <body>
+        
+        <script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http:/br/owsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+  <nav class="main-menu">
+            <ul>
+                <li><br/><br/><br/></li>
+				<li>
+                    <a href="index.html">
+                        <i class="icon-home nav-icon"></i>
+                        <span class="nav-text">
+                            Start
+                        </span>
+                    </a>
+                </li>
+              
+                <li>
+						<a href="profil.html">
+                        
+						<i class="icon-user nav-icon"></i>
+						
+                        <span class="nav-text">
+                            Profil
+                        </span>
+                    </a>
+		        </li>
+		   
+		   
+				<li>
+                    <a href="modyfikatory.html">
+                        <i class="icon-tasks nav-icon"></i>
+                        <span class="nav-text">
+                            Modyfikatory
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="wyniki.html">
+                        <i class="icon-search nav-icon"></i>
+                        <span class="nav-text">
+                            Wyszukaj ofertę
+                        </span>
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="firma.html">
+                        <i class="icon-building nav-icon"></i>
+                        <span class="nav-text">
+                            Usługodawca
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="branza.html">
+                        <i class="icon-table nav-icon"></i>
+                        <span class="nav-text">
+                            Branża
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="poczta.html">
+                         <i class="icon-envelope-alt nav-icon"><span class="badge" id="inbox-poczta">2</span></i>
+                        
+						<span class="nav-text">
+                            Poczta
+                        </span>
+						
+						
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="formularze.html">
+                        <i class="icon-file nav-icon"></i>
+                        <span class="nav-text">
+                            Formularze umów
+                        </span>
+                    </a>
+				</li>
+				
+				
+				
+				<li>
+                    <a href="edukacja.html">
+                        <i class="icon-book nav-icon"></i>
+                        <span class="nav-text">
+                            Edukacja
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="agentis.html">
+                        <i class="icon-group nav-icon"></i>
+                        <span class="nav-text">
+                            Agentis
+                        </span>
+                    </a>
+				</li>
+		   
+		   </ul>            
+           
+			
+              <ul class="logout">
+                <li>
+                    <a href="login.html">
+                        <i class="icon-off nav-icon"></i>
+                        <span class="nav-text">
+                            Wyloguj się
+                        </span>
+                    </a>
+                <p><br/><br/><br/></p>
+				</li>  
+            </ul>
+        </nav>
+        
+        <section class="sidebar extended">
+            <script>
+                if ($.cookie('protonSidebar') == 'retracted') {
+                    $('.sidebar').removeClass('extended').addClass('retracted');
+                    $('.wrapper').removeClass('retracted').addClass('extended');
+                }
+                if ($.cookie('protonSidebar') == 'extended') {
+                    $('.wrapper').removeClass('extended').addClass('retracted');
+                    $('.sidebar').removeClass('retracted').addClass('extended');
+                }
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <a href="index.html"><img src="images/proton-logo.png" alt="proton-logo"></a>
+                      
+                    </div>
+                </div>
+                <div class="panel-body">
+                    
+                <div class="form-group">
+                        
+						
+				
+						
+						
+						
+						<div class="profil-start">
+						<h4 class="section-title"><b>Profil użytkownika</b></h4>
+						<div class="ramka">
+						<h5><b>Panel informacyjny.</b></h5>
+						<h6>W tym miejscu znajdziesz podstawowe informacje o swoim koncie. Pamiętaj o zabezpieczeniu dostępu do danych. Zmieniaj hasło.</h6>
+						
+						<h5><b>Panel preferencji zakupowych.</b></h5>
+						<h6>Jeżeli podejmując decyzję o zakupie usług zwracasz uwagę nie tylko na cenę to w tym panelu znajdziesz miejsce na określienie co dla Ciebie jest ważne przy zakupach
+						</h6>
+						<h5><b>Panel komunikacyjny.</b></h5>
+						<h6>Odbieraj informacja o usługach przez Ciebie obserwowanych. Korzystaj z wzorówn formularzy przydatnych w procesie zmiany sprzedawcy usług.
+						</h6>
+						<h5><b>Panel administracji danych.</b></h5>
+						<h6>Uzyskaj dostęp do informacji w naszej bazie.
+						</h6>
+						</div>
+						</div>
+						
+						
+						<div class="profil-konto" style="display: none;">
+						<h4 class="section-title"><b>Ustawienia profilu</b></h4>
+						<div class="ramka">
+						<h5><b>Konto.</b></h5>
+						<h6>Zarządzaj ustawieniami konta. Zawsze zapisuj zmienione informacje.</h6>
+						<h6>Dla Twojej wygody przygotowaliśmy trzy rodzaje profili użytkownika. 
+						Poznaj je bliżej i zastanów się jakie czynności związane z zakupem usług chcesz nam zlecić. 
+						</h6>
+						<h5><b>Obserwowane.</b></h5><h6>Zarządzaj zakresem powiadomień trafiających na Twoje konto.
+						</h6>
+						<h5><b>Profil konsumpcji usług.</b></h5><h6>Jeżeli chcesz znaleźć ofertę dopasowaną do Twoich potrzeb musisz zastanowić się jak w praktyce koszystasz z danej usługi.</h6>
+						
+						<h5><b>Umowy.</b></h5><h6>Sprawdzaj jak przedstawiają się warunki Twoich umów w zestawieniu z ofertami dostępnymi na rynku.</h6>
+						<h5><b>Ulubione.</b></h5><h6>W tym miejscu znajdziesz wszystkie karty wyszukania usług, które wybrałeś w procesie porównywania usług w portalu.</h6>
+						</div>
+						</div>
+						
+						<div class="profil-modyfikatory" style="display: none;">
+						<h4 class="section-title"><b>Twoje preferencje</b></h4>
+						<div class="ramka">
+						<h5><b>Modyfikatory.</b></h5>
+						<h5>Cztery profile zakupowe. Użytkownik może wybrać jeden lub dowolną ilość profili. Z założenia preferencje klienta mają zastosowanie do wszystkich usług.
+Wartość procentowa suwaka jest wartością uśrednioną w przypadku wyboru więcej niż jednej preferencji zakupowej.
+Ikony profili preferencji powodują ustawienie suwaków w określonym predefiniowanym miejscu. Nie można ich zmienić. Powiązanie profil preferencji z konkretnymi suwakami. 
+Wybór profil custom resetuje ustawienia suwaków i daje możliwość ich swobodnego przesuwania. 
+Opcja custom– gmeranie suwakami oraz możliwość ustawiania preferencji dla każdej z branż oddzielnie. 
+Custom daje możliwość wykluczenia pewnej cechy usługi. Katalog cech do wykluczenia dla każdej usługi. 
+Na tą chwilę jedna definicja wykluczenia i jeden modyfikator do wykluczenia. 
+</h5>
+						
+						
+						</div>
+						</div>
+						
+						<div class="profil-komunikacja" style="display: none;">
+						<h4 class="section-title"><b>Bądź w kontakcie</b></h4>
+						<div class="ramka">
+						<h5><b>Komunikacja.</b></h5>
+						<h5>Do zastanowienia jak zarządzać wiadomościami (inbox/outbox/archiwum)
+Użytkownik może wybrać czy ma otrzymywać wiadomości na prywatną skrzynkę. 
+W treści wiadomości na skrzynkę prywatną dodawania ścieżki dostępowej do panelu informacyjnego w profilu użytkownika (automatyka przekierowania nawet bez logowania się do portalu)
+Wiadomość dotycząca informacji zamieszczonej w portalu zawiera bezpośredni link do miejsca w portalu, w którym taka informacja jest zamieszczona w pewnym kontekście np. tablica dla branży, tablica dla firmy 
+</h5>
+						
+						</div>
+						</div>
+						
+						<div class="profil-administracja" style="display: none;">
+						<h4 class="section-title"><b>Zarządzaj danymi</b></h4>
+						<div class="ramka">
+						<h5><b>Administracja.</b></h5>
+						<h5>Strona dla profilu biznesowego (administratora danych)
+Wszystkie informacje o usłudze/firmie.
+Pomoc do weryfikacji danych w naszej bazie.
+</h5>
+						</div>
+						</div>
+						
+						
+						
+						</div>
+						</div>
+				</div>
+         
+             
+       
+			
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+</section>
+
+        <section class="wrapper retracted scrollable">
+            
+            <script>
+                if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                    }
+                }
+            </script>
+            
+<nav class="user-menu">
+			
+ 
+			
+</nav>
+			
+		<div class="row">
+                <div class="col-md-12">
+				 
+				 <script>
+				 $(document).ready(function(){
+				 $('#rozszerzone').click(function(){
+				 $(".dane-zaawansowane").fadeIn();
+				 });
+				 $('#podstawowe').click(function(){
+				 $(".dane-zaawansowane").fadeToggle();
+				 });
+				 });
+				 </script>
+				 
+				 <script>
+				 $(document).ready(function(){
+				 $("a[href=#collapse1]").click(function(){
+				 $(".profil-start").hide();
+				 $(".profil-modyfikatory").hide();
+				 $(".profil-komunikacja").hide();
+				 $(".profil-administracja").hide();
+				 $(".profil-konto").fadeIn();
+				 
+				 });
+				 $("a[href=#collapse2]").click(function(){
+				 $(".profil-konto").hide();
+				 $(".profil-start").hide();
+				 $(".profil-komunikacja").hide();
+				 $(".profil-administracja").hide();
+				 $(".profil-modyfikatory").fadeIn();
+				 });
+				 $("a[href=#collapse3]").click(function(){
+				 $(".profil-start").hide();
+				 $(".profil-modyfikatory").hide();
+				 $(".profil-administracja").hide();
+				 $(".profil-konto").hide();
+				 $(".profil-komunikacja").fadeIn();
+				 });
+				 $("a[href=#collapse4]").click(function(){
+				 $(".profil-start").hide();
+				 $(".profil-konto").hide();
+				 $(".profil-modyfikatory").hide();
+				 $(".profil-komunikacja").hide();
+				 $(".profil-administracja").fadeIn();
+				 });
+				 });
+				 
+				 </script>
+                         
+
+
+
+						 
+                                        <!-- ACCORDION -->
+                    <div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+						<div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                        Panel informacyjny
+                                    </a>
+                                </h4>
+                            </div>
+                        <div id="collapse1" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                        <ul class="nav nav-tabs panel panel-default panel-block">
+                        <li class="start active"><a href="#tabs-konto" data-toggle="tab">Konto</a></li>
+                        <li><a href="#tabs-obserwacja" data-toggle="tab">Obserwowane</a></li>
+						<li><a href="#tabs-konsumpcja" data-toggle="tab">Profil konsumpcji usług</a></li>
+                        <li><a href="#tabs-umowy" data-toggle="tab">Umowy</a></li>
+						<li class="koszyk"><a href="#tabs-ulubione" data-toggle="tab">Ulubione</a></li>
+						<li><a href="#tabs-automat" data-toggle="tab">Automatyzacja</a></li></ul>
+						<div class="tab-content panel panel-default panel-block">
+                        <div class="tab-pane list-group active" id="tabs-konto">
+						<div class="list-group-item">
+								<h4 class="section-title preface-title">Wybierz rodzaj konta</h4>
+								<div class="form-group-horizontal">
+									<div>	
+                                      <label>
+                                        <input type="radio" name="optionsRadios" id="podstawowe" value="option1" checked>
+                                        Podstawowe
+                                      </label>
+                                    </div>
+									<div>	
+                                      <label>
+                                        <input type="radio" name="optionsRadios" id="rozszerzone" value="option2">
+                                        Rozszerzonone
+                                      </label>
+                                    </div>
+                                    <div>
+                                      <label>
+                                        <input type="radio" name="optionsRadios" id="zaawansowane" value="option3">
+										Zaawansowane
+                                      </label>
+                                    </div>
+									<div>
+                                      <label>
+                                        <input type="radio" name="optionsRadios" id="SI" value="option4">
+										Sztuczna inteligencja
+                                      </label>
+                                    </div>
+								</div>
+								</div>
+								<div class="list-group-item">	
+									<h4 class="section-title preface-title">Dane podstawowe</h4>
+									<form class="form-horizontal" role="form">
+									<div class="form-group">
+                                        <label for="input-horizontal" class="col-lg-4 control-label">Imię <i class="icon-info-sign uses-tooltip"  data-placement="top" title="" data-original-title="Nazwa firmy"></i></label>
+                                        <div class="col-lg-4">
+                                         <input id="input-horizontal-counter" class="form-control input-counter" placeholder="jan">
+                                        </div>
+                                    </div>
+									<div class="form-group">
+                                        <label for="input-horizontal" class="col-lg-4 control-label">Nazwisko</label>
+                                        <div class="col-lg-4">
+                                         <input id="input-horizontal-counter" class="form-control input-counter" placeholder="nazwisko">
+                                        </div>
+                                    </div>
+									<div class="form-group">
+                                        <label for="input-horizontal-counter" class="col-lg-4 control-label">Adres e-mail</label>
+                                        <div class="col-lg-4">
+                                            <input id="input-horizontal-counter" class="form-control input-counter" placeholder="jan.kowalski@gmail.com">
+                                       </div>
+										<a class="btn btn-primary pull-left">Zmień</a>
+										</div>
+									<div class="form-group">
+                                        <label for="input-horizontal-counter" class="col-lg-4 control-label">Hasło</label>
+                                        <div class="col-lg-4">
+                                        <input id="input-horizontal-counter" class="form-control input-counter" placeholder="**********">
+										</div>
+										<a class="btn btn-primary pull-left">Zmień</a>
+										</div>
+                                    <div class="form-group">
+                                        <label for="input-horizontal-counter" class="col-lg-4 control-label">Adres w portalu</label>
+                                        <div class="col-lg-4">
+                                        <input id="input-horizontal-counter" class="form-control input-counter" placeholder="www.agentis.pl/jan.kowalski">
+                                        </div>
+										</div>
+										<div class="form-group">
+                                        <label for="inputKodPocztowy" class="col-lg-4 control-label">Kod pocztowy</label>
+                                        <div class="col-lg-4">
+                                        <input class="form-control" id="inputKodPocztowy" type="tel" name="inputKodPocztowy">
+                                        </div>
+										</div>
+										<div class="form-group">
+                                        <label for="input-horizontal-counter" class="col-lg-4 control-label">Jesteś</label>
+										<div class="col-lg-4">
+										<label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        Kobięta
+										</label>
+										<label style="padding-left: 40px;">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        Mężczyzną
+										</label>
+										</div>
+									</div>
+									<div class="dane-zaawansowane" style="display:none;">
+									<div class="form-group">
+                                        <label for="input-horizontal-counter" class="col-lg-4 control-label">Miejscowość</label>
+                                        <div class="col-lg-4">
+                                        <input id="input-horizontal-counter" class="form-control input-counter" placeholder="Miejscowość">
+                                        </div>
+                                    </div>
+									<div class="form-group">
+                                        <label for="input-horizontal-counter" class="col-lg-4 control-label">Ulica</label>
+                                        <div class="col-lg-4">
+                                        <input id="input-horizontal-counter" class="form-control input-counter" placeholder="Ulica">
+                                        </div>
+                                    </div>
+									<div class="form-group">
+                                        <label for="input-horizontal-counter" class="col-lg-4 control-label">Telefon kontaktowy
+										<i class="icon-info-sign uses-tooltip"  data-placement="top" data-original-title="opcja"></i></label>
+                                        <div class="col-lg-4">
+                                            <input id="input-horizontal-counter" class="form-control input-counter" placeholder="">
+                                        </div>
+                                    </div>
+									<div class="form-group">
+                                        <label for="input-horizontal-counter" class="col-lg-4 control-label">Rejestr publiczny
+										<i class="icon-info-sign uses-tooltip" data-placement="top" data-original-title="opcja PESEL/REGON/NIP/KRS"></i>
+										</label>
+                                        <div class="col-lg-4">
+                                        <input id="input-horizontal-counter" class="form-control input-counter" placeholder="">
+                                        </div>
+                                    </div>
+									</div>
+									<div class="form-group">
+									<a class="btn btn-primary pull-right">Zapisz</a>
+									  </div>
+								</form>
+								</div>
+								</div>								
+						<div class="tab-pane list-group" id="tabs-obserwacja">
+                            <div class="list-group-item">
+                                <h4 class="section-title preface-title">Wskaż branże i firmy, które chciałbyś obserwować.</h4>
+                              
+									<div class="form-group">
+                                    <h5><b>Branża</b></h5>
+									<input type="text" placeholder="Placeholder Text" value="Energia, Gaz ziemny, Telefon i internet, Ochrona mienia, Usługi Pocztowe, Fundacje" data-role="tagsinput" />
+									</div>
+									
+									
+									<div class="form-group">
+                                    <h5><b>Usługodawcy</b></h5>
+									<input type="text" placeholder="Placeholder Text" value="Energetyczne Centrum, Doun, Energia dla Firm, EGESA, ENEA, PGNiG, PGE" data-role="tagsinput" />
+									</div>
+							
+							
+                            </div>
+                        </div>
+						<div class="tab-pane list-group" id="tabs-konsumpcja">
+                            <div class="list-group-item">
+                                <h4 class="section-title preface-title">Informacja</h4>
+                                <p>
+                                   Skorzystaj z dostępnych profilii bazujących na statystycznych danych konsumpcji z uwzględnieniem przedziałów wiekowych.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane list-group" id="tabs-umowy">
+                            <div class="list-group-item">
+                                <h4 class="section-title preface-title">Informacja</h4>
+                                <p>Nasz system pomoga w zarządzaniu portfelem Twoich umów w zależności od zakresu informacji jakie podasz o jednostkowej umowie.
+                                 </p>
+                            </div>
+                        </div>
+						<div class="tab-pane list-group" id="tabs-ulubione">
+                            <div class="list-group-item">
+                                <h4 class="section-title preface-title" id="koszyk-uslugi">Informacja</h4>
+                                <p>Tutaj trafiają usługi wybrane w trakcie procesu wyszukiwania ofert w portalu.
+                                    </p>
+                            </div>
+                        </div>
+						<div class="tab-pane list-group" id="tabs-automat">
+                            <div class="list-group-item">
+                                <h4 class="section-title preface-title">Informacja</h4>
+                                <p>Zdecyduj jakie czynności chcesz nam zlecić do automatyzacji.
+                                    </p>
+                            </div>
+                        </div>
+						</div> 
+						</div>
+						</div>
+						</div>
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                        Panel preferencji zakupowych
+                                    </a>
+                                </h4>
+                            </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+						<ul class="nav nav-tabs panel panel-default panel-block">
+						<li class="active"><a href="#tabs-pomoc" data-toggle="tab">Pomoc</a></li>
+						<li><a href="#tabs-profile" data-toggle="tab">Profil użytkownika</a></li>
+						<li><a href="#tabs-wykluczenie" data-toggle="tab">Wykluczenie</a></li></ul>
+						<div class="tab-content panel panel-default panel-block">
+						<div class="tab-pane list-group active" id="tabs-pomoc">
+						 <div class="list-group-item">
+                                    <h4 class="section-title preface-title">Zdecyduj jakie parametry usługi są dla Ciebie ważne</h4>
+									<h5>Podejmując decyzję o wyborze usługi zazwyczaj każdy z nas postępuje według określonego mechanizmu oceny ofert. Większość z nas zwraca uwagę na cenę.
+									W kolejnych krokach szukami innych cech ofert, które są dla nas ważne.
+									Postaraj się szczerze odpowiedzieć na poniższe pytania i wybierz właściwy dla Ciebie profil preferencji zakupowych.
+									Pamiętaj możesz ustawić profil dla każdej z usług oddzielnie. 
+									</h5>	
+									<div class="form-group" >
+                                    <div>
+                                      <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        Oszczędny
+                                      </label>
+                                    </div>
+                                    <div>
+                                      <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        Praktyczny
+                                      </label>
+                                    </div>
+                                    <div>
+                                      <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+										Wymagający
+                                      </label>
+                                    </div>
+									<div>
+                                      <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+										Etyczny
+                                      </label>
+                                    </div>								
+									</div>
+									</div>
+									</div>
+								<div class="tab-pane list-group" id="tabs-profile">
+								<div class="list-group-item">
+								<h4 class="section-title preface-title">Ustaw swój profil preferencji zakupowych</h4>	
+								<h5>Użytkownicy posiadający konto zaawansowane mogę korzystać z opcji ręcznego dopasowania poziomu istotności cech ofert/preferencji dla każdej usługi.</h5>
+							
+								<div class="suwaki" style="margin-left: 3px;">
+								
+										<label id="cena">
+										<input type="text" class="bslider modyfikator" value="" id="sl1" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="20" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="show" data-slider-handle="square">
+										</label>
+                                        <label id="umowa">
+										<input type="text" class="bslider modyfikator" value="" id="sl2" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="20" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="show" data-slider-handle="square" >
+                                        </label>
+										<label id="publiczne">
+										<input type="text" class="bslider modyfikator" value="" id="sl3" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="20" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="show" data-slider-handle="square" >
+                                        </label>
+										<label id="niepubliczne">
+										<input type="text" class="bslider modyfikator" value="" id="sl4" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="20" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="show" data-slider-placement="left" data-slider-handle="square" >
+                                        </label>
+										<label id="csr">
+										<input type="text" class="bslider modyfikator" value="" id="sl5" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="20" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="show" data-slider-handle="square">
+										</label>
+			
+						
+                                
+								<script>
+$(document).ready(function(){
+	$('#sl1').slider({
+          formater: function(value) {
+            return 'Cena';
+          }
+        });
+	$('#sl2').slider({
+          formater: function(value) {
+            return 'Umowa';
+          }
+        });
+	$('#sl3').slider({
+          formater: function(value) {
+            return 'Oceny publiczne';
+			
+          }
+        });
+	$('#sl4').slider({
+          formater: function(value) {
+            return 'Oceny prywatne';
+			
+          }
+        });
+	$('#sl5').slider({
+          formater: function(value) {
+            return 'CSR';
+          }
+        });	
+		
+		
+		$("#sl1").on('slide', function(slideEvt) {
+$("#suwak-val-1").val(slideEvt.value);
+});
+$("#sl2").on('slide', function(slideEvt) {
+$("#suwak-val-2").val(slideEvt.value);
+});
+$("#sl3").on('slide', function(slideEvt) {
+$("#suwak-val-3").val(slideEvt.value);
+});
+$("#sl4").on('slide', function(slideEvt) {
+$("#suwak-val-4").val(slideEvt.value);
+});
+$("#sl5").on('slide', function(slideEvt) {
+$("#suwak-val-5").val(slideEvt.value);
+});	
+
+});
+</script>
+
+
+								
+                    
+								</div>
+								<div class="suwaki-values-2">
+                                     <label>
+                                        <input id="suwak-val-1" value="20">
+                                     </label>
+                                     <label>
+                                        <input id="suwak-val-2" value="20">
+                                     </label>
+									 <label>
+                                        <input id="suwak-val-3" value="20">
+                                     </label>
+									 <label>
+                                        <input id="suwak-val-4" value="20">
+                                     </label>
+									 <label>
+                                        <input id="suwak-val-5" value="20">
+                                     </label>
+									 
+                                    </div>
+								
+								
+								
+							
+								</div>
+								</div>
+								<div class="tab-pane list-group" id="tabs-wykluczenie">
+								<div class="list-group-item">
+								<h4 class="section-title preface-title">Wskaż niepożądany parametr usługi </h4>	
+								<h5>Użytkownicy posiadający konto zaawansowane mają możliwość wykluczenia jednej z cech jakościowych oferty w danej kategorii usług. 
+									W tym celu przygotowaliśmy zestaw uniwerslanych warunków usług oraz katalog działań niepożądanych ze strony sprzedawcy usługi.  
+									</h5>
+								<div class="list-group">
+								<div class="list-group-item">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Placeholder Text" value="Kara, Nagroda, Klauzula niedozwolona, Truciciel, Słaby zasięg" data-role="tagsinput" />
+                                </div>
+								</div>
+								</div>
+								</div>
+								</div>
+								
+								
+								
+								</div>
+								</div>
+								</div>
+								</div>
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                        Panel komunikacyjny
+                                    </a>
+                                </h4>
+                            </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+						<ul class="nav nav-tabs panel panel-default panel-block">
+						<li class="active"><a href="#tabs-komunikacja" data-toggle="tab">Poczta</a></li>
+						<li><a href="#tabs-formularze" data-toggle="tab">Formularze umów / wnioski</a></li></ul>
+						<div class="tab-content panel panel-default panel-block">
+						<div class="tab-pane list-group active" id="tabs-komunikacja">
+						<div class="list-group-item">
+								<h4 class="section-title preface-title">Komunikator</h4>						
+								
+								<div class="row">
+								<div class="col-md-4">
+								<div class="form-group">
+                                    <label for="basic-text-area">Skrzynka pocztowa</label>
+                                    <div>
+                                    	<textarea id="basic-text-area" rows="21" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                </div>
+								<div class="col-md-8">
+								<div class="form-group">
+                                    <label for="text-area-auto-resize">Treść nowej wiadomości</label>
+                                    <div>
+                                        <textarea id="text-area-auto-resize" rows="4" class="form-control auto-resize"></textarea>
+                                    </div>
+                                </div>
+								<div class="form-group">
+                                    <label for="basic-text-area">Historia konwersacji</label>
+                                    <div>
+                                    	<textarea id="basic-text-area" rows="14" class="form-control"></textarea>
+                                    </div>
+                                </div>
+								</div>
+								
+								</div>
+								
+								
+								
+									</div>
+									</div>
+						<div class="tab-pane list-group" id="tabs-formularze">
+						<div class="list-group-item">
+								<h4 class="section-title preface-title">Wybierz formularze umów</h4>						
+								 <p>
+                                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                                        mauris vel est.
+                                    </p>
+                                    <p>
+                                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                        inceptos himenaeos.
+                                    </p>
+									</div>
+									</div>					
+									</div>
+									</div>
+									</div>
+									</div>
+						<div class="panel panel-default">
+                        <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                        Administracja danych
+                                    </a>
+                                </h4>
+                            </div>
+                        <div id="collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">
+						<ul class="nav nav-tabs panel panel-default panel-block">
+						<li class="active"><a href="#tabs-dane" data-toggle="tab">Dane</a></li>
+						<li><a href="#tabs-edytor" data-toggle="tab">Edytor danych</a></li></ul>
+						<div class="tab-content panel panel-default panel-block">
+						<div class="tab-pane list-group active" id="tabs-dane">
+						<div class="list-group-item">
+						<h4 class="section-title preface-title">Tablica informacyjna</h4>								
+	                    <table class="table table-bordered table-striped" id="tableSortable">
+	                        <thead>
+	                            <tr>
+	                                <th>Numer</th>
+	                                <th>Data</th>
+	                                <th>Tytuł</th>
+	                                <th>Treść</th>
+	                                <th>Źródło</th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+
+<tr class="1">
+<td class="jeden">1</td>
+<td class="dwa">2013-12-30</td>
+<td class="trzy">Podarowaliśmy Martynie wymarzony pokój na święta!</td>
+<td class="cztery">Przedświąteczny okres, oprócz szaleństwa zakupowego i szykowania pyszności na wigilijne stoły, to przede wszystkim czas, aby dzielić się z innymi dobrą energią. Dlatego tuż przed świętami Energetyczne</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/podarowalismy-martynie-wymarzony-pokoj-na-swieta-_68.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/podarowalismy-martynie-wymarzony-pokoj-na-swieta-_68.html#ad-image-0</a></td>
+</tr>
+<tr class="2">
+<td class="jeden">2</td>
+<td class="dwa">2013-10-02</td>
+<td class="trzy">Dobra energia dla Kamili - spełniliśmy kolejne marzenie podopiecznej Fundacji Mam Marzenie</td>
+<td class="cztery">Osiny Górne, niewielka wieś położona w województwie mazowieckim, w powiecie siedleckim. To właśnie tu spełniło się marzenie 12-letniej Kamili. Dziewczynka jest chora, przeszła przeszczep wątroby i trz</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/dobra-energia-dla-kamili-spelnilismy-kolejne-marzenie-podopiecznej-fundacji-mam-marzenie_56.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/dobra-energia-dla-kamili-spelnilismy-kolejne-marzenie-podopiecznej-fundacji-mam-marzenie_56.html#ad-image-0</a></td>
+</tr>
+<tr class="3">
+<td class="jeden">3</td>
+<td class="dwa">2013-08-22</td>
+<td class="trzy">Energetyczne Centrum spełniło marzenie podopiecznej Fundacji Mam Marzenie w Rabce Zdrój!</td>
+<td class="cztery">W niedziele, 18 sierpnia, podczas pikniku Lato z Radiem w Rabce-Zdroju spełniło się marzenie 11-letniej Łucji. Dziewczynka jest podopieczną krakowskiego oddziału Fundacji Mam Marzenie, która realizuje</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-spelnilo-marzenie-podopiecznej-fundacji-mam-marzenie-w-rabce-zdroj-_47.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-spelnilo-marzenie-podopiecznej-fundacji-mam-marzenie-w-rabce-zdroj-_47.html#ad-image-0</a></td>
+</tr>
+<tr class="4">
+<td class="jeden">4</td>
+<td class="dwa">2013-08-12</td>
+<td class="trzy">Wymarzone wakacje od Energetycznego Centrum dla 6-letniej Małgosi!</td>
+<td class="cztery">Małgosia jest podopieczną mazowieckiego oddziału Fundacji Mam Marzenie od roku. Dziewczynka od dawna marzyła o wyjeździe nad morze z rodziną i kuzynką. W te wakacje jej marzenie się spełniło! Dzięki w</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/wymarzone-wakacje-od-energetycznego-centrum-dla-6-letniej-malgosi-_40.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/wymarzone-wakacje-od-energetycznego-centrum-dla-6-letniej-malgosi-_40.html#ad-image-0</a></td>
+</tr>
+<tr class="5">
+<td class="jeden">5</td>
+<td class="dwa">2013-08-14</td>
+<td class="trzy">Świętujemy Dzień Energetyka!</td>
+<td class="cztery">14 sierpnia to w kalendarzu Dzień Energetyka. Z tej okazji Megawatek rozdaje dobrą energię i Mega energetyczne nagrody! Zapraszamy! https://www.facebook.com/EnergetyczneCentrum Z okazji Dnia Energetyk</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/swietujemy-dzien-energetyka-_44.html" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/swietujemy-dzien-energetyka-_44.html</a></td>
+</tr>
+<tr class="6">
+<td class="jeden">6</td>
+<td class="dwa">2013-10-18</td>
+<td class="trzy">Energetyczne Centrum wyróżnione przez Fundację Mam Marzenie!</td>
+<td class="cztery">Z przyjemnością informujemy, że Energetyczne Centrum zostało wyróżnione przed Fundację Mam Marzenie za szczególne zaangażowanie i pomoc chorym dzieciom w 2013 roku. Wyróżnienie, przyznawane firmom, kt</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-wyroznione-przez-fundacje-mam-marzenie-_62.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-wyroznione-przez-fundacje-mam-marzenie-_62.html#ad-image-0</a></td>
+</tr>
+<tr class="7">
+<td class="jeden">7</td>
+<td class="dwa">2013-09-30</td>
+<td class="trzy">Energetyczne Centrum nagrodzone! - Relacja z gali Lider Regionu 2013</td>
+<td class="cztery">W minioną sobotę na gali „Lider Regionu” Energetyczne Centrum zostało uhonorowane statuetką Lidera Regionu w Kategorii Usługi! W imieniu Prezesa Zarządu Energetycznego Centrum Pana Dariusza Chlastawy </td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-nagrodzone-relacja-z-gali-lider-regionu-2013_55.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-nagrodzone-relacja-z-gali-lider-regionu-2013_55.html#ad-image-0</a></td>
+</tr>
+<tr class="8">
+<td class="jeden">8</td>
+<td class="dwa">2013-06-25</td>
+<td class="trzy">Spełniliśmy marzenie Wiktora z Łodzi!</td>
+<td class="cztery">Dzięki współpracy Energetycznego Centrum z Fundacją Mam Marzenie, zrealizowaliśmy marzenie trzynastoletniego Wiktora z Łodzi. W sobotę, 22 czerwca, podczas pierwszego w tym roku Pikniku Lata z Radiem </td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/spelnilismy-marzenie-wiktora-z-lodzi-_24.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/spelnilismy-marzenie-wiktora-z-lodzi-_24.html#ad-image-0</a></td>
+</tr>
+<tr class="9">
+<td class="jeden">9</td>
+<td class="dwa">2013-07-23</td>
+<td class="trzy">W Zamościu Energetyczne Centrum spełniło kolejne marzenie!</td>
+<td class="cztery">Tegoroczne pikniki Lata z Radiem to nie tylko wspaniała zabawa, ale też czas spełniania marzeń. W Zamościu przekonała się o tym Karolina, podopieczna fundacji Mam Marzenie! Na zaproszenie Energetyczne</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/w-zamosciu-energetyczne-centrum-spelnilo-kolejne-marzenie-_34.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/w-zamosciu-energetyczne-centrum-spelnilo-kolejne-marzenie-_34.html#ad-image-0</a></td>
+</tr>
+<tr class="10">
+<td class="jeden">10</td>
+<td class="dwa">2013-08-06</td>
+<td class="trzy">W Gnieźnie spełniliśmy marzenie Kuby! – REPORTAŻ</td>
+<td class="cztery">W pierwszy weekend sierpnia spełniło się marzenie Kuby, podopiecznego fundacji Mam Marzenie. Zapraszamy do obejrzenia reportażu przygotowanego przez TV Wielkopolska. Energetyczne Centrum SA z Fundacją</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/w-gnieznie-spelnilismy-marzenie-kuby-reportaz_38.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/w-gnieznie-spelnilismy-marzenie-kuby-reportaz_38.html#ad-image-0</a></td>
+</tr>
+<tr class="11">
+<td class="jeden">11</td>
+<td class="dwa">2013-05-22</td>
+<td class="trzy">Podsumowanie sezonu 2012/2013 dla ROSY RADOM</td>
+<td class="cztery">Za nami kolejny sezon prestiżowych rozgrywek Polskiej Ligi Koszykówki 2012/2013 z udziałem sponsorowanej przez Energetyczne Centrum drużyny ROSA Radom. Marzenie o znalezieniu się radomskiej drużyny w </td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/podsumowanie-sezonu-2012-2013-dla-rosy-radom_18.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/podsumowanie-sezonu-2012-2013-dla-rosy-radom_18.html#ad-image-0</a></td>
+</tr>
+<tr class="12">
+<td class="jeden">12</td>
+<td class="dwa">2013-06-03</td>
+<td class="trzy">Energetyczne Centrum na wernisażu fotografii Michała Pazia</td>
+<td class="cztery">16 maja w Pałacu Zamoy­skich odbył się wer­ni­saż foto­gra­fii Michała Pazia „ONE”. Partnerem wyjątkowej wystawy o kobie­cym pięk­nie było Energetyczne Centrum SA. Wernisaż „ONE” to 60 zdjęć, z czego </td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-na-wernisazu-fotografii-michala-pazia_19.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-na-wernisazu-fotografii-michala-pazia_19.html#ad-image-0</a></td>
+</tr>
+<tr class="13">
+<td class="jeden">13</td>
+<td class="dwa">2013-04-15</td>
+<td class="trzy">Energetyczne Centrum spełni marzenie 3-letniej Sandry</td>
+<td class="cztery">W tym roku Energetyczne Centrum rozpoczęło współpracę z Fundacją Mam Marzenie. Już pod koniec kwietnia zrealizujemy pierwsze marzenie! Mała Sandra jest podopieczną Fundacji Mam Marzenie. W lutym Energ</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-spelni-marzenie-3-letniej-sandry_1.html" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-spelni-marzenie-3-letniej-sandry_1.html</a></td>
+</tr>
+<tr class="14">
+<td class="jeden">14</td>
+<td class="dwa">2013-04-29</td>
+<td class="trzy">Spełniliśmy marzenie Sandry!</td>
+<td class="cztery">Z przyjemnością informujemy, że w wyniku współpracy podjętej z Fundacją Mam Marzenie, Energetyczne Centrum SA sfinansowało realizację pierwszego marzenia! Trzech wolontariuszy Fundacji Mam Marzenie, p</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/spelnilismy-marzenie-sandry-_15.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/spelnilismy-marzenie-sandry-_15.html#ad-image-0</a></td>
+</tr>
+<tr class="15">
+<td class="jeden">15</td>
+<td class="dwa">2013-04-22</td>
+<td class="trzy">Wspieramy Kobiety Przedsiębiorcze!</td>
+<td class="cztery">W piątek, 19 kwietnia, odbyła się gala finałowa Plebiscytu Kobieta Przedsiębiorcza 2012. Energetyczne Centrum było partnerem głównym tegorocznego wydarzenia. Kobieta Przedsiębiorcza to jedyny w region</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/wspieramy-kobiety-przedsiebiorcze-_14.html#ad-image-0" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/wspieramy-kobiety-przedsiebiorcze-_14.html#ad-image-0</a></td>
+</tr>
+<tr class="16">
+<td class="jeden">16</td>
+<td class="dwa">2013-03-15</td>
+<td class="trzy">Wspieramy wyjątkowe kobiety w regionie radomskim!</td>
+<td class="cztery">Energetyczne Centrum jest partnerem tegorocznej edycji Plebiscytu Kobieta Przedsiębiorcza 2012. Kobieta Przedsiębiorcza to jedyny w regionie plebiscyt wyróżniający i promujący przedsiębiorcze panie, d</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/wspieramy-wyjatkowe-kobiety-w-regionie-radomskim-_4.html" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/wspieramy-wyjatkowe-kobiety-w-regionie-radomskim-_4.html</a></td>
+</tr>
+<tr class="17">
+<td class="jeden">17</td>
+<td class="dwa">2013-02-14</td>
+<td class="trzy">Energetyczne Centrum dołączyło do darczyńców Fundacji Mam Marzenie!</td>
+<td class="cztery">Energetyczne Centrum z radością wspiera finansowo fundację Mam Marzenie i pomaga w spełnianiu marzeń jej podopiecznych. Fundacja Mam Marzenie rozpoczęła działalność w lutym 2004 r. i obecnie posiada 1</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-dolaczylo-do-darczyncow-fundacji-mam-marzenie-_7.html" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-dolaczylo-do-darczyncow-fundacji-mam-marzenie-_7.html</a></td>
+</tr>
+<tr class="18">
+<td class="jeden">18</td>
+<td class="dwa">2013-03-28</td>
+<td class="trzy">Energetyczne Centrum uruchamia platformę komunikacyjną dla Rzeczników Konsumentów</td>
+<td class="cztery">Wychodząc naprzeciw oczekiwaniom Rzeczników Konsumentów i zgłaszającym się do nich Klientów, oraz chcąc usprawnić komunikację w sprawach wymagających pilnej realizacji, Energetyczne Centrum SA uruchom</td>
+<td class="piec"><a href="http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-uruchamia-platforme-komunikacyjna-dla-rzecznikow-konsumentow_10.html" target="_blank">http://www.ec.net.pl/o-nas/aktualnosci/energetyczne-centrum-uruchamia-platforme-komunikacyjna-dla-rzecznikow-konsumentow_10.html</a></td>
+</tr>
+
+	                        </tbody>
+	                    </table>
+		        
+								 
+								 
+								 
+									</div>
+									</div>					
+						<div class="tab-pane list-group" id="tabs-edytor">
+						<div class="list-group-item">
+								<h4 class="section-title preface-title">Edytuj informacje</h4>						
+                                <div class="form-group">
+                                     <div class="panel panel-default panel-block summernote-block">
+                                    <div>
+                                        <textarea id="wysiwyg" rows="20" class="form-control"></textarea>
+                                    </div>
+									</div>
+                                </div>
+						
+								  
+									</div>
+									</div>					
+									</div>
+									</div>
+									</div>
+									</div>			
+						</div>
+						</div>
+						</div>
+        </section>
+
+
+		
+        <script src="scripts/9e25e8e2.bootstrap.min.js"></script>
+
+		<!-- Proton base scripts: -->
+        <script src="scripts/3fa227ae.proton.js"></script>
+		<script src="scripts/proton/7d8c8d18.forms.js"></script>
+
+		<script src="scripts/vendor/bootstrap-slider.js"></script>
+		
+        <script src="scripts/proton/6c42db75.sidebar.js"></script>
+		<script src="scripts/vendor/jquery.uniform.min.js"></script>
+       
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+       
+            <script src="scripts/vendor/bootstrap-switch.js"></script>
+			<script src="scripts/vendor/jquery.maskedinput.min.js"></script>
+			 <script src="scripts/vendor/charCount.js"></script>
+			
+			<script src="scripts/vendor/summernote.js"></script>
+			 <script src="scripts/vendor/jquery.textareaCounter.js"></script>
+			<script src="scripts/vendor/bootstrap-datetimepicker.js"></script>
+			
+			<script src="scripts/proton/5558cd34.tables.js"></script>
+			<script src="scripts/vendor/jquery.dataTables.min.js"></script>
+			<script src="scripts/vendor/datatables.js"></script>
+			<script src="scripts/vendor/select2.min.js"></script>
+			 <script src="scripts/vendor/bootstrap-tagsinput.min.js"></script>
+			 
+    </body>
+</html>

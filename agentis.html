@@ -1,0 +1,310 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie10"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+    
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>IDAgentis</title>
+        <meta name="description" content="Page Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/d6220a84.bootstrap.css">
+
+
+        <!-- Page-specific Plugin CSS: -->
+
+
+        <!-- Proton CSS: -->
+        <link rel="stylesheet" href="styles/1b2c4b33.proton.css">
+        <link rel="stylesheet" href="styles/vendor/animate.css">
+
+        <!-- adds CSS media query support to IE8   -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="scripts/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Fonts CSS: -->
+        <link rel="stylesheet" href="styles/9a41946e.font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="styles/4d9a7458.font-titillium.css" type="text/css" />
+
+        <!-- Common Scripts: -->
+        <script src="scripts/vendor/jquery.min.js"></script>
+        <script src="scripts/vendor/modernizr.js"></script>
+        <script src="scripts/vendor/jquery.cookie.js"></script>
+		
+		
+		
+    
+		
+		
+		
+		
+    </head>
+
+    <body>
+        
+        <script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+ <nav class="main-menu">
+            <ul>
+                <li><br/><br/><br/></li>
+				<li>
+                    <a href="index.html">
+                        <i class="icon-home nav-icon"></i>
+                        <span class="nav-text">
+                            Start
+                        </span>
+                    </a>
+                </li>
+              
+                <li>
+						<a href="profil.html">
+                        
+						<i class="icon-user nav-icon"></i>
+						
+                        <span class="nav-text">
+                            Profil
+                        </span>
+                    </a>
+		        </li>
+		   
+		   
+				<li>
+                    <a href="modyfikatory.html">
+                        <i class="icon-tasks nav-icon"></i>
+                        <span class="nav-text">
+                            Modyfikatory
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="wyniki.html">
+                        <i class="icon-search nav-icon"></i>
+                        <span class="nav-text">
+                            Wyszukaj ofertę
+                        </span>
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="firma.html">
+                        <i class="icon-building nav-icon"></i>
+                        <span class="nav-text">
+                            Usługodawca
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="branza.html">
+                        <i class="icon-table nav-icon"></i>
+                        <span class="nav-text">
+                            Branża
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="poczta.html">
+                         <i class="icon-envelope-alt nav-icon"><span class="badge" id="inbox-poczta">2</span></i>
+                        
+						<span class="nav-text">
+                            Poczta
+                        </span>
+						
+						
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="formularze.html">
+                        <i class="icon-file nav-icon"></i>
+                        <span class="nav-text">
+                            Formularze umów
+                        </span>
+                    </a>
+				</li>
+				
+				
+				
+				<li>
+                    <a href="edukacja.html">
+                        <i class="icon-book nav-icon"></i>
+                        <span class="nav-text">
+                            Edukacja
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="agentis.html">
+                        <i class="icon-group nav-icon"></i>
+                        <span class="nav-text">
+                            Agentis
+                        </span>
+                    </a>
+				</li>
+		   
+		   </ul>            
+           
+			
+              <ul class="logout">
+                <li>
+                    <a href="login.html">
+                        <i class="icon-off nav-icon"></i>
+                        <span class="nav-text">
+                            Wyloguj się
+                        </span>
+                    </a>
+                <p><br/><br/><br/></p>
+				</li>  
+            </ul>
+        </nav>		
+		
+		
+		
+   
+        
+        <section class="sidebar extended">
+            <script>
+                if ($.cookie('protonSidebar') == 'retracted') {
+                    $('.sidebar').removeClass('extended').addClass('retracted');
+                    $('.wrapper').removeClass('retracted').addClass('extended');
+                }
+                if ($.cookie('protonSidebar') == 'extended') {
+                    $('.wrapper').removeClass('extended').addClass('retracted');
+                    $('.sidebar').removeClass('retracted').addClass('extended');
+                }
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <a href="index.html"><img src="images/proton-logo.png" alt="proton-logo"></a>
+                      
+                    </div>
+                </div>
+                <div class="panel-body">
+                    
+                <div class="form-group">
+                                    <h4 class="section-title"><b>Poznaj nas</b></h4>
+									
+									
+						
+						</div>
+								
+				
+                </div>
+                </div>
+                    
+             
+           
+			
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+        </section>
+
+  <section class="wrapper retracted scrollable">
+            
+            <script>
+                if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                    }
+                }
+            </script>
+            
+			<nav class="user-menu">
+			
+           
+			
+			</nav>
+			
+		 <div class="panel panel-default">
+		 
+		 
+		<div class="row">
+		
+		<div class="col-md-6" style="padding: 20px 0 0 30px;">
+		
+		<div class="glowy">
+		
+		<img src="images/founder.gif" alt="founder">
+		
+		<img src="images/founder.gif" alt="founder">
+		
+		<img src="images/founder.gif" alt="founder">
+		
+		</div>
+		
+		</div>
+		
+		<div class="col-md-6">
+		
+		<div class="laurki">
+		
+		<div class="laurka">1</div>
+		<div class="laurka">2</div>
+		<div class="laurka">3</div>
+		
+		</div>
+
+		</div>
+             
+		</div>
+        </section>
+
+        <script src="scripts/9e25e8e2.bootstrap.min.js"></script>
+
+		<!-- Proton base scripts: -->
+        <script src="scripts/3fa227ae.proton.js"></script>
+
+
+         <!-- Page-specific scripts: -->
+        <script src="scripts/proton/6c42db75.sidebar.js"></script>
+        <script src="scripts/proton/c5769bf5.ui-components-sliders.js"></script>
+     
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+  
+        <script src="scripts/vendor/bootstrap-slider.js"></script>
+		
+        <script src="scripts/proton/7d8c8d18.forms.js"></script>
+    
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+  
+    
+            <script src="scripts/vendor/select2.min.js"></script>
+
+   
+            <script src="scripts/vendor/jquery.uniform.min.js"></script>
+
+            <script src="scripts/vendor/bootstrap-datetimepicker.js"></script>
+            <script src="scripts/vendor/charCount.js"></script>
+            <script src="scripts/vendor/jquery.textareaCounter.js"></script>
+            <script src="scripts/vendor/summernote.js"></script>	   
+			
+			<script src="scripts/jquery.mixitup.js"></script>
+			
+			
+    </body>
+</html>

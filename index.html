@@ -1,0 +1,713 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie10"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+    
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+       <title>IDAgentis</title>
+        <meta name="description" content="Page Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/d6220a84.bootstrap.css">
+		
+		
+	   <!-- Page-specific Plugin CSS: -->
+
+
+        <!-- Proton CSS: -->
+        <link rel="stylesheet" href="styles/1b2c4b33.proton.css">
+        <link rel="stylesheet" href="styles/vendor/animate.css">
+		
+		
+		<link rel="stylesheet" href="styles/vendor/jquery.pnotify.default.css">
+
+        <!-- adds CSS media query support to IE8   -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="scripts/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Fonts CSS: -->
+        <link rel="stylesheet" href="styles/9a41946e.font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="styles/4d9a7458.font-titillium.css" type="text/css" />
+		<link rel="stylesheet" href="styles/open-sans.css" type="text/css" />
+
+        <!-- Common Scripts: -->
+        <script src="scripts/vendor/jquery.min.js"></script>
+        <script src="scripts/vendor/modernizr.js"></script>
+        <script src="scripts/vendor/jquery.cookie.js"></script>
+		<script src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
+		
+    </head>
+
+    <body>
+        
+        <script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+ <nav class="main-menu">
+            <ul>
+                <li><br/><br/><br/></li>
+				<li>
+                    <a href="index.html">
+                        <i class="icon-home nav-icon"></i>
+                        <span class="nav-text">
+                            Start
+                        </span>
+                    </a>
+                </li>
+              
+                <li>
+						<a href="profil.html">
+                        
+						<i class="icon-user nav-icon"></i>
+						
+                        <span class="nav-text">
+                            Profil
+                        </span>
+                    </a>
+		        </li>
+		   
+		   
+				<li>
+                    <a href="modyfikatory.html">
+                        <i class="icon-tasks nav-icon"></i>
+                        <span class="nav-text">
+                            Modyfikatory
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="wyniki.html">
+                        <i class="icon-search nav-icon"></i>
+                        <span class="nav-text">
+                            Wyszukaj ofertę
+                        </span>
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="firma.html">
+                        <i class="icon-building nav-icon"></i>
+                        <span class="nav-text">
+                            Usługodawca
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="branza.html">
+                        <i class="icon-table nav-icon"></i>
+                        <span class="nav-text">
+                            Branża
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="poczta.html">
+                         <i class="icon-envelope-alt nav-icon"><span class="badge" id="inbox-poczta">2</span></i>
+                        
+						<span class="nav-text">
+                            Poczta
+                        </span>
+						
+						
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="formularze.html">
+                        <i class="icon-file nav-icon"></i>
+                        <span class="nav-text">
+                            Formularze umów
+                        </span>
+                    </a>
+				</li>
+				
+				
+				
+				<li>
+                    <a href="edukacja.html">
+                        <i class="icon-book nav-icon"></i>
+                        <span class="nav-text">
+                            Edukacja
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="agentis.html">
+                        <i class="icon-group nav-icon"></i>
+                        <span class="nav-text">
+                            Agentis
+                        </span>
+                    </a>
+				</li>
+		   
+		   </ul>            
+           
+			
+              <ul class="logout">
+                <li>
+                    <a href="login.html">
+                        <i class="icon-off nav-icon"></i>
+                        <span class="nav-text">
+                            Wyloguj się
+                        </span>
+                    </a>
+                <p><br/><br/><br/></p>
+				</li>  
+            </ul>
+        </nav>
+        
+        <section class="sidebar extended">
+            <script>
+                if ($.cookie('protonSidebar') == 'retracted') {
+                    $('.sidebar').removeClass('extended').addClass('retracted');
+                    $('.wrapper').removeClass('retracted').addClass('extended');
+                }
+                if ($.cookie('protonSidebar') == 'extended') {
+                    $('.wrapper').removeClass('extended').addClass('retracted');
+                    $('.sidebar').removeClass('retracted').addClass('extended');
+                }
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <a href="index.html"><img src="images/proton-logo.png" alt="proton-logo"></a>
+                      
+                    </div>
+                </div>
+   <div class="panel-body">
+                 
+   <div class="form-group">
+      <div class="start-help1">                         
+<h4 class="section-title" style="color: black;"><b>Witamy serdecznie</b></h4>
+<div id="ramka-start">
+<h5>W naszym portalu <span class="tuba">porównujemy usługi</span> biorąc pod uwagę <span span class="tuba">ich cenę</span> oraz najważniejsze <span class="tuba">parametry jakościowe</span>.</h5>
+<h5>Do prezentacji usług oraz budowy profili biznesowych usługodawców wykorzystujemy <span span class="tuba">publicznie dostępne informacje</span>.</h5>
+<h5>Użytkownicy portalu, w prosty i szybki sposób, mogą znaleźć <span class="tuba">usługi dopasowane do indywidualnych preferencji Klienta</span>.</h5>
+<h5>Naszym celem jest rozwój takiego model biznesu, w którym <span span class="tuba">jesteśmy pełnomocnikiem Klienta</span>.</h5>
+<h5>Zapraszamy do założenia profilu użytkownika. Prosimy o przesyłanie sugestii jakie usługi powinniśmy analizować w przyszłości.</h5>	
+ <a href="login.html" class="logowanie-start"><b>Dołącz do nas</b></a>
+ </div>
+ </div>
+				
+                
+		<div class="start-help2" style="display: none;">                         
+		<h4 class="section-title"><b>Lista branż</b></h4>
+			<div class="ramka">
+			<h5>Masz tutaj wybór:</h5>
+			<ul>
+			<li><h6>Jeżeli chcesz wyszukać ofertę idź dalej</h6></li>
+			<li><h6>Jeżeli chcesz dowiedzieć się więcej o branży skorzystaj z naszych przewodników.</h6>
+			<h6><span style="font-weight: 600;">Pamiętaj, że możesz bezpośrednio przejść do informacji o branży korzystając z paska zadań, a posiadanie konta daje możliwość ustawienia swoich ulubionych branż.</span></h6></li>
+			</ul>
+			</div>
+		</div>			
+		
+		<div class="start-help3" style="display: none;">                         
+		<h4 class="section-title"><b>Profil konsumpcji usługi</b></h4>
+			<div class="ramka">
+			<h5>Jeżeli nie masz konta:</h5>
+			<ul>
+			<li><h6>wprowadź kod pocztowy</h6></li>
+			<li><h6>wybierz dystrybutora i obecnego sprzedawcę energii. </h6><h6><span style="font-weight: 600;">Pamiętaj, że dystrybutora energii nie można zmienić.</span></h6></li>
+			<li><h6>ustal plan konsumpcji usługi (z automatu pojawi się wielkość statystycznie dopasowana do rodzaju produktu)</h6><h6><span style="font-weight: 600;">Pamiętaj, że możesz ustalić jak korzystasz z usługi w profilu użytkownika.</span></h6></li>
+			</ul>
+			</div>
+		</div>	
+		
+		
+		<div class="start-help4" style="display: none;">                         
+		<h4 class="section-title"><b>Rodzaje produktów</b></h4>
+			
+			<div class="ramka">
+			<h5>Przed Tobą ostatni krok.</h5>
+			<ul>
+			<li><h6>Jeżeli chcesz wyszukać usługą wybierz produkt i przejdź dalej</h6></li>
+			<li><h6>Jeżeli chcesz dowiedzieć się więcej o danym produkcie skorzystaj z naszych przewodników dostępnych w dziale edukacja.</h6>
+			<h6><span style="font-weight: 600;">Pamiętaj, że posiadanie konta pozwala zapisać Twoje ulubione produkty i branże.</span></h6>	
+			</li>
+			</ul>
+			</div>	
+		</div>	
+		
+		
+	
+	</div>
+</div>
+			
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+</section>
+
+        <section class="wrapper retracted scrollable">
+            
+            <script>
+                if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                    }
+                }
+            </script>
+            
+<nav class="user-menu">
+			
+<div class="partnerzy">
+
+<script>
+$(document).ready(function () {
+$("#logos").smoothDivScroll({ 
+		autoScrollingMode: "always", 
+		autoScrollingDirection: "endlessLoopRight", 
+		autoScrollingStep: 1, 
+		autoScrollingInterval: 25 
+	});
+
+	// Logo parade event handlers
+	$("#logos").bind("mouseover", function() {
+		$(this).smoothDivScroll("stopAutoScrolling");
+	}).bind("mouseout", function() {
+		$(this).smoothDivScroll("startAutoScrolling");
+	});
+});
+</script> 
+
+
+
+<div id="logos">
+		
+		
+        <a href="http://www.ure.gov.pl/" target="_blank"><img src="images/logos/ure.png" /></a>
+		<a href="http://www.uokik.gov.pl/index.php" target="_blank"><img src="images/logos/uokik.png" /></a>
+		<a href="http://www.uke.gov.pl/" target="_blank"><img src="images/logos/uke.png"  /></a>
+		<a href="http://www.knf.gov.pl/" target="_blank"><img src="images/logos/knf.png"/></a>
+		<a href="http://www.brpo.gov.pl/" target="_blank"><img src="images/logos/rzso.png" /></a>
+		<a href="http://www.piit.org.pl/" target="_blank"><img src="images/logos/piit.png"  /></a>
+		
+		</div>
+		
+
+</div>
+
+
+                           
+</div>    
+			
+</nav>
+					<div class="row">
+					<div class="col-md-12">
+                    <div class="panel-default">
+					<div class="panel panel-default panel-block startowy">
+					<div class="panel-heading" style="text-align: center; ">
+                        
+							<div class="domek" style="display:none;">
+							<a href="index.html" class="uses-tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="start"><i class="icon-home"></i></a>
+							</div>
+							
+							<div id="komunikaty">
+                            <h3><b>Twój osobisty doradca zakupowy</b></h3>
+							<h4 id="krok1">"Nie trać czasu i wybieraj:</h4>
+							<h4 id="krok2" style="display:none;">"Wybierz branżę:</h4>
+							<h4 id="krok3" style="display:none;">"Podaj następujące informacje:</h4>
+							<h4 id="krok4" style="display:none;">"Wybierz produkt:</h4>
+							</div>
+					
+
+							<div class="startowe-guziki-div">
+							<div id="div-dom-start">
+							<div class="div-dom-start-title"><a href="javascript:">Oferta dla domu</a></div>
+							<div class="input-group dom">
+								<input type="text" class="form-control dom" placeholder="najtańszy sprzedawca energii w Gdańsku?">
+								<div class="input-group-btn">                  
+                            <button class="btn" type="button"><i class="icon-search"></i></button>
+							</div>
+							</div>
+							</div>
+							<div id="div-biznes-start">
+							<div class="div-biznes-start-title"><a href="javascript:">Oferta dla biznesu</a></div>
+							<div class="input-group firma">
+								<input type="text" class="form-control firma" placeholder="najlepszy sprzedawca gazu dla firmy?">
+								<div class="input-group-btn">
+                            <button class="btn" type="button"><i class="icon-search"></i></button>
+							</div>
+							</div>
+							</div>
+							</div>
+						
+					
+					
+					<div class="start-zamiana-dom" style="display: none;">
+					<div class="start1-dom"><p>Energia</p>
+					<div class="start1-overlay">
+					<a href="javascript:konsumpcja()" title="dalej" id="skakacz-dom"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-dom"><p>Gaz</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-dom"><p>Telefon i internet</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej" id="skakacz-dom"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-dom"><p>Deweloperzy</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej" id="skakacz-dom"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-dom"><p>Ubezpieczenia</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej" id="skakacz-dom"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-dom"><p>Ochrona mienia</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej" id="skakacz-dom"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-dom"><p>Usługi pocztowe</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej" id="skakacz-dom"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-dom"><p>Fundacje</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej" id="skakacz-dom"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					</div>
+					
+					
+					<div class="start-zamiana-biznes" style="display: none;">					
+					<div class="start1-biznes"><p>Energia</p>
+					<div class="start1-overlay">
+					<a href="javascript:konsumpcja()" title="dalej" id="skakacz-biznes"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-biznes"><p>Gaz</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej" id="skakacz-biznes"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-biznes"><p>Telefon i internet</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej" id="skakacz-biznes"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-biznes"><p>Ubezpieczenia</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej" id="skakacz-biznes"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-biznes"><p>Ochrona mienia</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej" id="skakacz-biznes"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					<div class="start1-biznes"><p>Fundacje</p>
+					<div class="start1-overlay">
+					<a href="javascript:" title="dalej" id="skakacz-biznes"><i class="icon-zoom-in"></i></a>
+					<a href="branza.html" title="branża"><i class="icon-table nav-icon"></i></a>
+					</div>
+					</div>
+					</div>
+					
+						<div id="formularz-uslugi" style="display: none;">
+						<div class="panel-test">
+						<div class="list-group">
+							<form class="form-horizontal" role="form">	
+							<div class="form-group">
+                                        <label class="col-lg-4 control-label">
+                                           Kod pocztowy:
+                                        </label>
+                                        <div class="col-lg-2">
+                                            <input class="form-control" id="inputKodPocztowy">
+                                        </div>
+                            </div>
+							<div class="form-group">
+                                        <label class="col-lg-4 control-label">
+                                          Operator sieci dystrybucyjnej (OSD):
+                                        </label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control">
+											
+                                        </div>
+							</div>
+							<div class="form-group">
+                                        <label class="col-lg-4 control-label">
+                                          Sprzedawca energii elektrycznej:
+                                        </label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control">
+											
+                                        </div>
+							</div>
+							<div class="form-group">
+                                        <label class="col-lg-4 control-label">
+                                         Okres rozliczeniowy: 
+                                        </label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control">
+											
+                                        </div>
+							</div>
+							<div class="form-group">
+                                        <label class="col-lg-4 control-label">
+                                          Roczne zużycie energii:
+                                        </label>
+                                        <div class="col-lg-4">
+                                            <input class="form-control" placeholder="statystyczny Kowalski">
+                                        </div>
+										<label class="col-lg-2 control-label">
+										kwh
+										<label>
+							</div>
+							<div class="form-group">
+                                        <label class="col-lg-4 control-label">
+                                        Procent zużycia energii dla taryf G12:
+                                        </label>
+										<div class="row">
+                                        <div class="col-lg-1" style="float:left; font-size:12px;margin-top:6px;">
+										Dzień
+										</div>
+										<div class="col-lg-5" style="float:left; margin-left: -60px; margin-top: 4px;">
+                                        <div class="form-group" >
+                                        <input type="text" class="bslider" value="100" class="sort" data-sort="data-age" data-order="desc" data-slider-min="0" data-slider-max="100" data-slider-step="25" data-slider-value="50" data-slider-tooltip="show" data-slider-handle="square" >
+									</div>
+									</div>
+										<div class="col-lg-1" style="float:left; margin-left: -70px; font-size:12px; margin-top:6px;">
+										Noc
+										</div>
+							
+							</div>
+							</div>
+							<div class="form-group" style="text-align: center;">
+							
+							<a class="formularz-dalej"><b>Dalej</b></a>
+						
+							</div>
+							</form>
+							</div>
+							</div>
+					</div>
+					
+					
+					
+					<div class="start-zamiana-dom2" style="display: none;">
+					<div class="start2-branza-dom"><p>Energia elektryczna</p></div>
+					<div class="start2"><p>G-11</p>
+					<div class="start2-overlay">
+					<a href="wyniki.html" title="wyszukaj ofertę"><i class="icon-zoom-in"></i></a>
+					<a href="edukacja.html" title="edukacja"><i class="icon-book"></i></a>
+					</div>
+					</div>
+					<div class="start2"><p>G-12</p>
+					<div class="start2-overlay">
+					<a href="wyniki.html" title="wyszukaj ofertę"><i class="icon-zoom-in"></i></a>
+					<a href="edukacja.html" title="edukacja"><i class="icon-book"></i></a>
+					</div></div>
+					<div class="start2-custom"><p>Twój plan</p>
+					<div class="start2-overlay">
+					<a href="wyniki.html" title="wyszukaj ofertę"><i class="icon-zoom-in"></i></a>
+					<a href="edukacja.html" title="edukacja"><i class="icon-book"></i></a>
+					</div></div></div>
+					
+					
+					
+					<div class="start-zamiana-biznes2" style="display: none;">
+					<div class="start2-branza-biznes"><p>Energia elektryczna</p></div>	
+					<div class="start2"><p>G-11</p>
+					<div class="start2-overlay">
+					<a href="wyniki.html" title="wyszukaj ofertę"><i class="icon-zoom-in"></i></a>
+					<a href="edukacja.html" title="edukacja"><i class="icon-book"></i></a>
+					</div>
+					</div>
+					<div class="start2"><p>G-12</p>
+					<div class="start2-overlay">
+					<a href="wyniki.html" title="wyszukaj ofertę"><i class="icon-zoom-in"></i></a>
+					<a href="edukacja.html" title="edukacja"><i class="icon-book"></i></a>
+					</div></div>
+					<div class="start2-custom"><p>Twój plan</p>
+					<div class="start2-overlay">
+					<a href="wyniki.html" title="wyszukaj ofertę"><i class="icon-zoom-in"></i></a>
+					<a href="edukacja.html" title="edukacja"><i class="icon-book"></i></a>
+					</div></div></div>
+					
+					
+					
+					
+					
+					<script>
+					
+					$('.div-dom-start-title').click(function () {
+					$(".startowe-guziki-div").hide();
+					$("#btn-biznes-start").hide();
+					$(".start-help1").hide()
+					$("#krok1").hide();
+					$(".start-zamiana-dom").fadeIn();
+					$(".domek").fadeIn();
+					$("#krok2").fadeIn();
+					$(".start-help2").fadeIn();
+					});
+					
+					$('.div-biznes-start-title').click(function () {
+					$(".startowe-guziki-div").hide();
+					$("#btn-dom-start").hide();
+					$(".start-help1").hide();
+					$("#krok1").hide();
+					$(".start-zamiana-biznes").fadeIn();
+					$(".domek").fadeIn();
+					$("#krok2").fadeIn();
+					$(".start-help2").fadeIn();
+					});
+					
+					
+					</script>
+					
+					<script>
+					function konsumpcja()
+					{
+					$(".start-zamiana-biznes").hide();
+					$(".start-zamiana-dom").hide();
+					$("#krok2").hide();
+					$("#krok3").fadeIn();
+					$(".start-help2").hide();
+					$(".start-help3").fadeIn();
+					$("#formularz-uslugi").fadeIn();
+					};		
+					</script>
+					
+					<script>
+					$(".formularz-dalej").click(function () {
+					$(".start-help3").hide();
+					$("#formularz-uslugi").hide();
+					$("#krok3").hide();
+					$("#krok4").fadeIn();
+					$(".start-help4").fadeIn();
+					$(".start-zamiana-dom2").fadeIn();
+					});
+					
+					
+					</script>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				</div>
+		</div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $('.bslider').slider();
+});
+</script>
+
+
+<script>
+
+$(document).ready(function () {
+		
+		$.pnotify.defaults.delay = 10000;
+		$.pnotify.defaults.shadow = false;
+		$.pnotify.defaults.cornerclass = 'ui-pnotify-sharp';
+		$.pnotify.defaults.stack = {"dir1": "down", "dir2": "left", "push": "bottom", "spacing1": 5, "spacing2": 5};
+
+		setTimeout(function(){
+		    $.pnotify({
+		        title: 'Masz tutaj wybór:',
+		        type: 'info',
+		        history: false,
+		        text: '1. Wybierz grupę usług dla Ciebie <br/>2. Zadaj pytanie dotyczące danej usługi'
+		    });
+		}, 2000);
+		
+});
+
+</script>
+
+
+
+
+
+
+
+      
+
+	 </section>
+
+        
+		 
+        <script src="scripts/9e25e8e2.bootstrap.min.js"></script>
+
+		<!-- Proton base scripts: -->
+        <script src="scripts/3fa227ae.proton.js"></script>
+		<script src="scripts/proton/7d8c8d18.forms.js"></script>
+		<script src="scripts/vendor/bootstrap-slider.js"></script>
+      
+        <script src="scripts/proton/6c42db75.sidebar.js"></script>
+		
+		<script src="scripts/vendor/jquery.uniform.min.js"></script>
+       
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+       
+            <script src="scripts/vendor/bootstrap-switch.js"></script>
+			<script src="scripts/vendor/jquery.maskedinput.min.js"></script>
+			 <script src="scripts/vendor/charCount.js"></script>
+			
+			<script src="scripts/vendor/summernote.js"></script>
+			 <script src="scripts/vendor/jquery.textareaCounter.js"></script>
+			<script src="scripts/vendor/bootstrap-datetimepicker.js"></script>
+			<script src="scripts/vendor/jquery.pnotify.min.js"></script>
+			
+			<script src="scripts/jquery.smoothdivscroll-1.3-min.js"></script>
+			<script src="scripts/jquery.mousewheel.min.js"></script>
+			<script src="scripts/jquery.kinetic.min.js"></script>
+        
+    </body>
+</html>

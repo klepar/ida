@@ -1,0 +1,567 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie10"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 lt-ie10"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+    
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+       <title>IDAgentis</title>
+        <meta name="description" content="Page Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="styles/d6220a84.bootstrap.css">
+		     
+		
+		<!-- Page-specific Plugin CSS: -->
+
+
+        <!-- Proton CSS: -->
+        <link rel="stylesheet" href="styles/1b2c4b33.proton.css">
+        <link rel="stylesheet" href="styles/vendor/animate.css">
+
+        <!-- adds CSS media query support to IE8   -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="scripts/vendor/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Fonts CSS: -->
+        <link rel="stylesheet" href="styles/9a41946e.font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="styles/4d9a7458.font-titillium.css" type="text/css" />
+
+        <!-- Common Scripts: -->
+        <script src="scripts/vendor/jquery.min.js"></script>
+        <script src="scripts/vendor/modernizr.js"></script>
+        <script src="scripts/vendor/jquery.cookie.js"></script>
+		
+		
+		
+		
+		
+    </head>
+
+    <body>
+        
+        <script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+        <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+    <nav class="main-menu">
+            <ul>
+                <li><br/><br/><br/></li>
+				<li>
+                    <a href="index.html">
+                        <i class="icon-home nav-icon"></i>
+                        <span class="nav-text">
+                            Start
+                        </span>
+                    </a>
+                </li>
+              
+                <li>
+						<a href="profil.html">
+                        
+						<i class="icon-user nav-icon"></i>
+						
+                        <span class="nav-text">
+                            Profil
+                        </span>
+                    </a>
+		        </li>
+		   
+		   
+				<li>
+                    <a href="modyfikatory.html">
+                        <i class="icon-tasks nav-icon"></i>
+                        <span class="nav-text">
+                            Modyfikatory
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="wyniki.html">
+                        <i class="icon-search nav-icon"></i>
+                        <span class="nav-text">
+                            Wyszukaj ofertę
+                        </span>
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="firma.html">
+                        <i class="icon-building nav-icon"></i>
+                        <span class="nav-text">
+                            Usługodawca
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="branza.html">
+                        <i class="icon-table nav-icon"></i>
+                        <span class="nav-text">
+                            Branża
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="poczta.html">
+                         <i class="icon-envelope-alt nav-icon"><span class="badge" id="inbox-poczta">2</span></i>
+                        
+						<span class="nav-text">
+                            Poczta
+                        </span>
+						
+						
+                    </a>
+				</li>
+			
+				<li>
+                    <a href="formularze.html">
+                        <i class="icon-file nav-icon"></i>
+                        <span class="nav-text">
+                            Formularze umów
+                        </span>
+                    </a>
+				</li>
+				
+				
+				
+				<li>
+                    <a href="edukacja.html">
+                        <i class="icon-book nav-icon"></i>
+                        <span class="nav-text">
+                            Edukacja
+                        </span>
+                    </a>
+				</li>
+				
+				<li>
+                    <a href="agentis.html">
+                        <i class="icon-group nav-icon"></i>
+                        <span class="nav-text">
+                            Agentis
+                        </span>
+                    </a>
+				</li>
+		   
+		   </ul>            
+           
+			
+              <ul class="logout">
+                <li>
+                    <a href="login.html">
+                        <i class="icon-off nav-icon"></i>
+                        <span class="nav-text">
+                            Wyloguj się
+                        </span>
+                    </a>
+                <p><br/><br/><br/></p>
+				</li>  
+            </ul>
+        </nav>
+        
+        <section class="sidebar extended">
+            <script>
+                if ($.cookie('protonSidebar') == 'retracted') {
+                    $('.sidebar').removeClass('extended').addClass('retracted');
+                    $('.wrapper').removeClass('retracted').addClass('extended');
+                }
+                if ($.cookie('protonSidebar') == 'extended') {
+                    $('.wrapper').removeClass('extended').addClass('retracted');
+                    $('.sidebar').removeClass('retracted').addClass('extended');
+                }
+            </script>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="clearfix">
+                        <a href="index.html"><img src="images/proton-logo.png" alt="proton-logo"></a>
+                      
+                    </div>
+                </div>
+               <div class="panel-body">
+                
+                <div class="form-group">
+                                <h4 class="section-title"><b>Branża</b></h4>
+								<div class="ramka">	
+									<h6> Pamiętaj, że możesz w swoim profilu wybrać branże, które chcesz obserwować.<br/>
+									Możesz tam również ustalić zasady prezentacji danych.</h6>    
+									<label><h5><b>Wybierz branżę</b></h5></label>
+                                    <select class="form-control" id="source" >
+										<optgroup label="Ulubiony">
+											<option value="GZ">Energia elektryczna</option>
+										</optgroup>
+										<optgroup label="Usługi">
+											<option value="ee">Energia elektryczna</option>
+											<option value="GZ">Gaz ziemny</option>
+											<option value="GZ">Telefon i internet</option>
+											<option value="GZ">Ubezpieczenie nieruchomości</option>
+											<option value="GZ">Działalność charytatywna</option>
+										</optgroup>
+                                    </select>		
+                   
+				
+				<div class="form-group" style="margin-top: 20px;">
+			  <h5><b>Poznaj lepiej branżę</b></h5>
+				<h6> Pamiętaj, że w dziale edukacja znajdziesz przewodniki opisujące specyfikę każdej z branż. 
+				Dowiesz się z nich jakie prawa i obowiązki ma Klient na każdym rynku usług. Poznasz proces zmiany sprzedawcy usług.</h6>
+				
+			
+                    </div>
+             
+           
+			
+            <div class="sidebar-handle">
+                <i class="icon-ellipsis-horizontal"></i>
+                <i class="icon-ellipsis-vertical"></i>
+            </div>
+        </section>
+
+        <section class="wrapper retracted scrollable">
+            
+            <script>
+                if (!($('body').is('.dashboard-page') || $('body').is('.login-page'))){
+                    if ($.cookie('protonSidebar') == 'retracted') {
+                        $('.wrapper').removeClass('retracted').addClass('extended');
+                    }
+                    if ($.cookie('protonSidebar') == 'extended') {
+                        $('.wrapper').removeClass('extended').addClass('retracted');
+                    }
+                }
+            </script>
+            
+			<nav class="user-menu">
+			<div class="partnerzy">
+
+			
+		
+			
+			
+
+<div id="logos">
+
+
+
+
+<table class="logos_table" style="display:none; float:right;"><tr>
+<td><a href=""><img src="images/logos/ure.png" width="65%" height="65%" border="0" alt="ure" /></a></td>
+<td><a href=""><img src="images/logos/uokik.png" width="70%" height="70%" border="0" alt="uokik" /></a></td>
+
+
+
+</tr></table>
+
+
+</div>
+
+<script type="text/javascript">
+function show(i) {
+jQuery('#logos table:visible').fadeOut('medium',function() {
+jQuery('#logos table').eq(i).fadeIn('medium');
+});
+if (++i >= jQuery('#logos table').length){i=0};
+setTimeout('show(' + i + ')',5000);
+}
+$(document).ready(function(){
+if(jQuery('#logos table').length > 1){
+jQuery(function() { jQuery('#logos table:first').show(); setTimeout('show(0)',5000); });
+}
+else{
+jQuery('#logos table:first').show();
+}
+});
+</script> 
+
+ 
+                           
+</div>  
+			
+			
+			</nav>
+					
+					<div class="col-md-12">
+					<div class="panel panel-default panel-block panel-title-block">
+					<div class="panel-body">
+                        <h4 class="section-title"><b>Energia elektryczna - zasada TPA</b></h4>
+					
+						<h5 class="infoteka">Powszechne prawo wyboru i zmiany sprzedawcy energii zostało wprowadzone z dniem 1 stycznia 2007 roku. Zmiana sprzedawcy stała się możliwa dzięki zastosowaniu zasady TPA (ang. Third Party Access = Dostęp osoby trzeciej do sieci). Zasada TPA polega na udostępnieniu infrastruktury sieciowej przez jej właściciela na rzecz podmiotów trzecich w celu dostarczenia usług klientom strony trzeciej. Warunkiem koniecznym było wprowadzenie funkcjonalnego podziału na przedsiębiorstwa zajmujące się przesyłem energii oraz na przedsiębiorstwa odpowiedzialne wyłącznie za sprzedaż energii. Odbiorcy końcowi energii elektrycznej dysponują prawem wyboru dostawcy z gwarancją ustawową, że sprzedawca energii zrealizuje dostawy zgodnie z umową handlową (kompleksowa umowa dostarczania energii elektrycznej).
+						</h5>
+					</div>
+
+		<div class="panel-heading" style="margin-top: -30px;">	
+		<h4 class="section-title"><b>Puls rynku energii</b></h4>
+		<div class="row">
+		<div class="col-md-6">
+		<h5 class="section-title"><b>Średnia cena energii na giełdzie (PLN/MWh)</b></h5>
+		<div id="graph-gielda"></div>
+		</div>
+		<div class="col-md-6">
+		<h5 class="section-title"><b>Dospodarstwa domowe korzystające z zasady TPA</b></h5>
+		<div id="graph-tpa"></div>
+		</div>
+		</div>
+		</div>
+		<div class="panel-heading" style="margin-top: -20px;">			
+		<h4 class="section-title"><b>Kalendarium ważnych wydarzeń</b></h4>
+		<div class="timeline">			
+		<div class="timeline-wrap">
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-01-14</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>W kierunku pełnej liberalizacji rynku energii elektrycznej w Polsce </b></h5>
+				<h6><a href="http://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/5603,W-kierunku-pelnej-liberalizacji-rynku-energii-elektrycznej-w-Polsce.html" target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>W grudniu 2013 r., po kilkumiesięcznych uzgodnieniach, Rada Zarządzająca Towarzystwa Obrotu Energią (TOE) i Zarząd Polskiego Towarzystwa Przesyłu i Rozdziału Energii Elektrycznej (PTPiREE) zaakceptowały opracowaną wspólnie treść wzorca Generalnej Umowy Dystrybucji dla Usługi Kompleksowej (tzw. GUD-K). Prace nad projektem GUD-K były prowadzone z rekomendacji i przy udziale Urzędu Regulacji Energetyki.  Generalna Umowa Dystrybucji dla Usługi Kompleksowej umożliwia świadczenie przez wszystkich sprzedawców energii elektrycznej usługi kompleksowej (obejmującej sprzedaż energii elektrycznej oraz zapewnienie świadczenia usługi dystrybucji tej energii) odbiorcom w gospodarstwach domowych po dokonaniu przez nich zmiany sprzedawcy energii elektrycznej. </p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+				</div>
+		</div>
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-01-15</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>Zbiór praw konsumenta energii elektrycznej już dostępny dla odbiorców energii!</b></h5>
+				<h6><a href="http://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/5605,Zbior-praw-konsumenta-energii-elektrycznej-juz-dostepny-dla-odbiorcow-energii.html" target="_blank"
+><b>Link do strony źródłowej</b></a></h6>
+				<p>W trosce o interesy wszystkich uczestników rynku, a zwłaszcza odbiorców indywidualnych, Prezes Urzędu Regulacji Energetyki prowadzi szereg działań o charakterze informacyjno - edukacyjnym. Szczególne miejsce w katalogu zadań regulatora stanowią inicjatywy podejmowane w celu zwiększenia świadomości konsumentów energii. Zgodnie z założeniem, że tylko właściwie poinformowany odbiorca jest w stanie zadbać o własne interesy na rynku energii, w Urzędzie Regulacji Energetyki powstał Zbiór praw konsumenta energii elektrycznej - pierwsza z dwóch części kompendium przeznaczonego dla odbiorców energii. Kolejny dokument prezentujący prawa konsumentów paliw gazowych jest już na etapie finalizacji.
+				</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+			</div>	
+		</div>
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-03-07</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>Ponad 26 milionów złotych kar dla przedsiębiorstw energetycznych w 2012 r. </b></h5>
+				<h6><a href="http://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/5154,Ponad-26-milionow-zlotych-kar-dla-przedsiebiorstw-energetycznych-w-2012-r.html" target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>W ubiegłym roku za nieprzestrzeganie przepisów ustawy - Prawo energetyczne Prezes URE wymierzył kary pieniężne w łącznej wysokości ponad 26 milionów złotych. </p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+				</div>
+		</div>
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-04-18</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>W trosce o odbiorców energii. Prezes URE porównuje warunki umów sprzedaży rezerwowej energii elektrycznej </b></h5>
+				<h6><a href="http://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/5232,W-trosce-o-odbiorcow-energii-Prezes-URE-porownuje-warunki-umow-sprzedazy-rezerwo.html" target="_blank"<b>Link do strony źródłowej</b></a></h6>
+				<p>Mając na uwadze poszanowanie praw wszystkich uczestników rynku, ze względu na obecną sytuację, w której niektórzy sprzedawcy zaprzestają czy też mogą zaprzestać prowadzenia działalności, Prezes URE porównał warunki ekonomiczne zawarte we wzorach umów sprzedaży rezerwowej energii elektrycznej. </p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+				</div>
+		</div>
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-09-18</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>Informacja w sprawie średniej ceny energii elektrycznej uwzględniającej cenę dystrybucji energii dla odbiorcy w gospodarstwie domowym za 2012 rok </b></h5>
+				<h6><a href="http://www.ure.gov.pl/pl/stanowiska/5436,Informacja-nr-242013.html" target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>URE informuję,
+				że średnia cena energii elektrycznej dla odbiorcy w gospodarstwie domowym
+				uwzględniająca opłatę za świadczenie usługi dystrybucji energii elektrycznej, obliczona
+					na podstawie cen zawartych w umowach kompleksowych za 2012 rok
+					wyniosła 0,5047 zł/kWh.		</p>
+					<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+				</div>
+		</div>
+		<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-11-14</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>Średnie kwartalne ceny zakupu gazu ziemnego z zagranicy </b></h5>
+				<h6><a href="http://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/5529,Srednie-kwartalne-ceny-zakupu-gazu-ziemnego-z-zagranicy.html" target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>Informacja Prezesa Urzędu Regulacji Energetyki Nr 36/2013 W dniu 14 listopada Prezes URE, działając na podstawie art. 49 c ust. 2 ustawy z dnia 10 kwietnia 1997 r. -Prawo energetyczne (Dz. U. z 2012 r. poz. 1059, z późn. zm.), ogłosił średnią cenę zakupu gazu ziemnego sprowadzanego z państw członkowskich Unii Europejskiej lub z państw członkowskich Europejskiego Porozumienia o Wolnym Handlu (EFTA) - stron umowy o Europejskim Obszarze Gospodarczym za III kwartał 2013 r. Średnia cena za ten okres wyniosła 1,29 zł/m3. Załączniki do strony Informacja w sprawie średnich kwartalnych cen zakupu gazu ziemnego z zagranicy, o których mowa art. 49c ust.2 ustawy - Prawo energetyczne Data dodania: 14.11.2013 15:12 Data publikacji: 14.11.2013 Tagi: gaz, średnie ceny
+				</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+				</div>
+				</div>
+		
+			<div class="timeline-event">
+			<div class="timeline-title">
+			<p class="timeline-glowa">2013-12-13</p>
+			</div>
+			<div class="timeline-content">
+				<h5><b>O rozwoju hurtowego rynku gazu w Polsce. Podsumowanie kolejnego spotkania konsultacyjnego w URE </b></h5>
+				<h6><a href="http://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/5565,O-rozwoju-hurtowego-rynku-gazu-w-Polsce-Podsumowanie-kolejnego-spotkania-konsult.html" target="_blank"><b>Link do strony źródłowej</b></a></h6>
+				<p>W dniu 2 grudnia br. w siedzibie Urzędu Regulacji Energetyki odbyło się drugie z cyklu spotkań konsultacyjnych uczestników hurtowego rynku gazu w Polsce, zainicjowanych przez Prezesa URE. W ramach kontynuowania dyskusji na temat barier liberalizacji tego rynku, biorący udział w spotkaniu podjęli próbę wskazania możliwych do wprowadzenia zmian w zakresie bilansowania.</p>
+				<div class="news-oceny">
+				<div style="float: left"><span>ocena: </span><i class="icon-thumbs-up" style="color: green; font-size: 18px;"></i><span style="color: green;">100%</span></div>
+				<div style="float: right"><span>oceń:</span><i class="icon-thumbs-up" style="color: green; font-size: 18px; padding: 0 5px 0 5px;"></i><i class="icon-thumbs-down" style="color: red; font-size: 18px; padding: 0 5px 0 5px;"></i></div>
+				</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+</div>				
+		
+	                        
+<div class="footer">
+
+
+<div id="logos2">
+
+<table class="logos_table" style="display:none;"><tr>
+<td><a href="/"><img src="images/logos/duon.png" width="70%" height="70%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/energie2.png" width="65%" height="65%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/enea.png" width="55%" height="55%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/energetyczne_centrum.png" width="60%" height="60%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/pge.png" width="65%" height="65%" border="0" alt="ure" /></a></td>
+</tr></table>
+
+<table class="logos_table" style="display:none;"><tr>
+<td><a href="/"><img src="images/logos/tauron.png" width="65%" height="65%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/polski_prad.png" width="85%" height="85%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/egesa.png" width="75%" height="75%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/rwe.png" width="80%" height="75%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/interenergia.png" width="75%" height="75%" border="0" alt="ure" /></a></td>
+<td><a href="/"><img src="images/logos/3 wings.png" width="75%" height="75%" border="0" alt="ure" /></a></td>
+
+
+</tr></table>
+</div>
+
+<script type="text/javascript">
+function show(i) {
+jQuery('#logos2 table:visible').fadeOut('medium',function() {
+jQuery('#logos2 table').eq(i).fadeIn('medium');
+});
+if (++i >= jQuery('#logos2 table').length){i=0};
+setTimeout('show(' + i + ')',5000);
+}
+$(document).ready(function(){
+if(jQuery('#logos2 table').length > 1){
+jQuery(function() { jQuery('#logos2 table:first').show(); setTimeout('show(0)',5000); });
+}
+else{
+jQuery('#logos2 table:first').show();
+}
+});
+</script> 
+
+
+<script>
+
+ $(document).ready(function(){
+	
+	Morris.Line({
+	element: 'graph-gielda',
+	data: [
+	{year: '2009', "dane": 155, MWh: 155},
+	{year: '2010', "dane": 178, MWh: 178},
+	{year: '2011', "dane": 204, MWh: 204},
+	{year: '2012', "dane": 196, MWh: 196},
+	{year: '2013', "dane": 171, MWh: 171}
+	],
+	xkey: 'year',
+	ykeys: ['dane'],
+	labels: ['MWh'],
+	ymin: 150,
+	});
+});
+
+</script>
+
+<script>
+$(document).ready(function(){
+Morris.Bar({
+  element: 'graph-tpa',
+  data: [
+    {x: '2011', tpa: 13001},
+    {x: '2012', tpa: 62129},
+	{x: '2013', tpa: 59149}
+  ],
+	xkey: 'x',
+	ykeys: ['tpa'],
+	labels: ['TPA'],
+  });
+});
+	  
+	  
+</script>
+
+
+                  
+</div>  
+                           
+
+
+ 
+        </section>
+
+        
+        <script src="scripts/9e25e8e2.bootstrap.min.js"></script>
+
+		<!-- Proton base scripts: -->
+        <script src="scripts/3fa227ae.proton.js"></script>
+
+
+         <!-- Page-specific scripts: -->
+        <script src="scripts/proton/6c42db75.sidebar.js"></script>
+        <script src="scripts/proton/c5769bf5.ui-components-sliders.js"></script>
+		<script src="scripts/proton/9a49ef79.graphsStats.js"></script>
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+  
+        <script src="scripts/vendor/bootstrap-slider.js"></script>
+		
+        <script src="scripts/proton/7d8c8d18.forms.js"></script>
+    
+        <script src="scripts/vendor/jquery.jstree.js"></script>
+  
+    
+            <script src="scripts/vendor/select2.min.js"></script>
+
+   
+            <script src="scripts/vendor/jquery.uniform.min.js"></script>
+
+            <script src="scripts/vendor/bootstrap-datetimepicker.js"></script>
+            <script src="scripts/vendor/charCount.js"></script>
+            <script src="scripts/vendor/jquery.textareaCounter.js"></script>
+         
+			
+			<script src="scripts/vendor/summernote.js"></script>
+			<script src="scripts/touch.timeline.js"></script>
+			
+			
+			<script src="scripts/vendor/raphael-min.js"></script>
+			<script src="scripts/vendor/morris.min.js"></script>
+	
+			
+			
+    </body>
+</html>
