@@ -1,3 +1,5 @@
+$.removeCookie
+
 $(document).ready(function(){
 $('button.btn.btn-compare.1').click(function() {
 				$.cookie("porownanie", "jeden", {
