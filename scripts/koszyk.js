@@ -1,6 +1,5 @@
-$(document).ready(function(){
-			$.removeCookie();
-});
+$(document).ready(function($.removeCookie());
+
 
 
 
